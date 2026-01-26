@@ -5,24 +5,28 @@
     <x-slot:main>
         <section class="mx-auto w-full max-w-[1440px]">
             <div class="flex items-center justify-between space-x-20">
-                <button class="flex items-center justify-center h-12 w-12 bg-white rounded shadow text-blue-800">
+                <button type="button" style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
+                    class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.7284 19.5L8.23877 12L15.7284 4.5" stroke="#004274" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
                 <div class="flex-1 flex items-center justify-start -space-x-14">
-                    <img class="rounded h-[522px] w-[696px]"
-                        src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-
-                    <div class="flex-1">
-                        <div class=" px-8 py-9 bg-white rounded-md shadow-lg">
+                    <div class="rounded h-[522px] w-[696px] relative"
+                        style="box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)">
+                        <div class="rounded absolute inset-0 bg-black/20"></div>
+                        <img class="rounded h-full w-full object-cover"
+                            src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                    </div>
+                    <div class="z-20 flex-1">
+                        <div class="text-primary-gray px-8 py-9 bg-white rounded-md shadow-lg">
                             <dl class="flex items-center justify-between">
-                                <dt class="text-2xl font-semibold">Villa With two stories</dt>
+                                <dt class="text-2xl font-semibold text-gray-800">Villa With two stories</dt>
                                 <dd class="flex items-center space-x-2">
-                                    <span class="bg-blue-400 px-4 py-1.5 text-gray-700 font-medium text-sm">For
+                                    <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">For
                                         Sale</span>
-                                    <span class="bg-blue-400 px-4 py-1.5 text-gray-700 font-medium text-sm">For
+                                    <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">For
                                         Sale</span>
                                 </dd>
                             </dl>
@@ -105,14 +109,15 @@
                                         </dd>
                                     </div>
                                 </dl>
-                                <p class="font-bold text-blue-700">
+                                <p class="text-xl font-bold text-primary">
                                     200,0000 LYD
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="flex items-center justify-center h-12 w-12 bg-white rounded shadow text-blue-800">
+                <button type="button" style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
+                    class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.23853 4.5L15.7281 12L8.23853 19.5" stroke="#004274" stroke-width="1.5"
@@ -120,7 +125,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="mt-10 flex items-center justify-center space-x-1.5">
+            <div class="mt-10 flex items-center justify-center space-x-1.5 pb-2">
                 <button>
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -140,9 +145,9 @@
                     </svg>
                 </button>
                 <button>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                    <svg class="fill-primary" width="16" height="16" viewBox="0 0 16 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="8" cy="8" r="8" fill="#004274" />
+                        <circle cx="8" cy="8" r="8" fill="fillCurrent" />
                     </svg>
                 </button>
                 <button>
