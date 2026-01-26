@@ -1,6 +1,6 @@
 <header class="bg-white">
-    <nav
-        class="flex items-center justify-between px-10 py-6 rounded-b shadow-lg mx-auto w-full max-w-[1440px] bg-blue-900 text-white">
+    <nav class="flex items-center justify-between px-10 py-6 rounded-b mx-auto w-full max-w-[1440px] bg-primary text-white"
+        style="box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16)">
         <svg width="174" height="39" viewBox="0 0 174 39" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_14_790)">
                 <path
@@ -58,19 +58,37 @@
                 </clipPath>
             </defs>
         </svg>
-        <ul class="flex items-center space-x-6">
-            <li>
-                Home
-            </li>
-            <li>
-                Home
+        <ul class="flex items-center space-x-6 font-bold">
+            <li class="">
+                <span
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    <span class="relative">الرئيسية</span>
+                </span>
             </li>
 
-            <li>
-                Home
+            <li class="">
+                <span
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    <span class="relative">سكني</span>
+                </span>
             </li>
-            <li>
-                Home
+            <li class="">
+                <span
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    <span class="relative">تجاري</span>
+                </span>
+            </li>
+            <li class="">
+                <span
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    <span class="relative">شقق</span>
+                </span>
+            </li>
+            <li class="">
+                <span
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    <span class="relative">تواصل معنا</span>
+                </span>
             </li>
         </ul>
     </nav>
