@@ -235,9 +235,22 @@
             <div class="grid grid-cols-3 gap-13 mt-16 mx-40 -mb-20">
                 @for ($i = 0; $i < 3; $i++)
                     <div class="w-[500px] rounded-md shadow-xl bg-white">
-                        <img class="h-[364px] w-full object-cover rounded-t-md"
-                            src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="">
+                        <div class="relative">
+                            <div class="absolute inset-0 rounded-t-md bg-black/40 z-10"></div>
+                            <div class="absolute top-6 end-6 z-20">
+                                <dl class="flex items-center justify-between">
+                                    <dd class="flex items-center space-x-2">
+                                        <span class="bg-blue-400 px-4 py-1.5 text-gray-700 font-medium text-sm">For
+                                            Sale</span>
+                                        <span class="bg-blue-400 px-4 py-1.5 text-gray-700 font-medium text-sm">For
+                                            Sale</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <img class="h-[364px] w-full object-cover rounded-t-md"
+                                src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="" />
+                        </div>
                         <div class="pb-10 px-8 pt-6">
                             <a href="#" class="text-xl font-semibold">Villa With Two Stories</a>
                             <p class="mt-2 font-normal">Near Masjid Al-Hassan & Al-Hussain, Bawabet Al-Jebs, Tripoli.
@@ -329,6 +342,111 @@
                         </div>
                     </div>
                 @endfor
+            </div>
+        </section>
+        <section id="bento" class="mt-56 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 grid-row-2 gap-20">
+                <div class="grid grid-cols-3 grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
+                    @for ($i = 0; $i < 5; $i++)
+                        <div class="bg-blue-600  h-60 w-60 @if ($i == 1) h-full row-span-2 @endif">
+                        </div>
+                    @endfor
+                </div>
+
+                <div class="grid grid-cols-3 grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
+                    @for ($i = 0; $i < 4; $i++)
+                        <div
+                            class="bg-blue-600  h-60 w-60 @if ($i == 0) h-full row-span-2 @endif @if ($i == 3) w-full col-span-2 @endif">
+                        </div>
+                    @endfor
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="relative mt-50 w-full max-w-[1440px] mx-auto bg-blue-900 rounded shadow-md">
+            <div class="absolute start-14 -top-16">
+                <div class="bg-white p-10 font-bold text-4xl rounded text-blue-900"
+                    style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">كن على تواصل</div>
+            </div>
+            <div class="px-28 py-28 grid grid-cols-3 justify-items-center gap-24 items-center">
+                <dl class="grid grid-cols-1 gap-8 justify-items-start items-start">
+                    <div class="flex items-center space-x-8 text-white font-semibold">
+                        <dt>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20 14C20 15.0609 19.5786 16.0783 18.8284 16.8284C18.0783 17.5786 17.0609 18 16 18C14.9391 18 13.9217 17.5786 13.1716 16.8284C12.4214 16.0783 12 15.0609 12 14C12 12.9391 12.4214 11.9217 13.1716 11.1716C13.9217 10.4214 14.9391 10 16 10C17.0609 10 18.0783 10.4214 18.8284 11.1716C19.5786 11.9217 20 12.9391 20 14Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M26 14C26 23.5227 16 29 16 29C16 29 6 23.5227 6 14C6 11.3478 7.05357 8.8043 8.92893 6.92893C10.8043 5.05357 13.3478 4 16 4C18.6522 4 21.1957 5.05357 23.0711 6.92893C24.9464 8.8043 26 11.3478 26 14Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </dt>
+                        <dd>شارع القبب، السياحية، طرابلس، ليبا.</dd>
+                    </div>
+                    <div class="flex items-center space-x-8 text-white font-semibold">
+                        <dt>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9C3 20.0453 11.9547 29 23 29H26C26.7957 29 27.5587 28.6839 28.1213 28.1213C28.6839 27.5587 29 26.7957 29 26V24.1707C29 23.4827 28.532 22.8827 27.864 22.716L21.9667 21.2413C21.38 21.0947 20.764 21.3147 20.4027 21.7973L19.1093 23.5213C18.7333 24.0227 18.084 24.244 17.496 24.028C15.3132 23.2255 13.3309 21.9581 11.6864 20.3136C10.0419 18.6691 8.7745 16.6868 7.972 14.504C7.756 13.916 7.97733 13.2667 8.47867 12.8907L10.2027 11.5973C10.6867 11.236 10.9053 10.6187 10.7587 10.0333L9.284 4.136C9.20285 3.81159 9.01563 3.5236 8.75207 3.31778C8.48851 3.11196 8.16374 3.00011 7.82933 3H6C5.20435 3 4.44129 3.31607 3.87868 3.87868C3.31607 4.44129 3 5.20435 3 6V9Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </dt>
+                        <dd>+218-911234567</dd>
+                    </div>
+                    <div class="flex items-center space-x-8 text-white font-semibold">
+                        <dt>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 9C3 20.0453 11.9547 29 23 29H26C26.7957 29 27.5587 28.6839 28.1213 28.1213C28.6839 27.5587 29 26.7957 29 26V24.1707C29 23.4827 28.532 22.8827 27.864 22.716L21.9667 21.2413C21.38 21.0947 20.764 21.3147 20.4027 21.7973L19.1093 23.5213C18.7333 24.0227 18.084 24.244 17.496 24.028C15.3132 23.2255 13.3309 21.9581 11.6864 20.3136C10.0419 18.6691 8.7745 16.6868 7.972 14.504C7.756 13.916 7.97733 13.2667 8.47867 12.8907L10.2027 11.5973C10.6867 11.236 10.9053 10.6187 10.7587 10.0333L9.284 4.136C9.20285 3.81159 9.01563 3.5236 8.75207 3.31778C8.48851 3.11196 8.16374 3.00011 7.82933 3H6C5.20435 3 4.44129 3.31607 3.87868 3.87868C3.31607 4.44129 3 5.20435 3 6V9Z"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </dt>
+                        <dd>+218-911234567</dd>
+                    </div>
+                    <div class="flex items-center space-x-8 text-white font-semibold">
+                        <dt>
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M29 9V23C29 23.7956 28.6839 24.5587 28.1213 25.1213C27.5587 25.6839 26.7957 26 26 26H6C5.20435 26 4.44129 25.6839 3.87868 25.1213C3.31607 24.5587 3 23.7956 3 23V9M29 9C29 8.20435 28.6839 7.44129 28.1213 6.87868C27.5587 6.31607 26.7957 6 26 6H6C5.20435 6 4.44129 6.31607 3.87868 6.87868C3.31607 7.44129 3 8.20435 3 9M29 9V9.324C29.0001 9.83619 28.869 10.3399 28.6192 10.7871C28.3695 11.2342 28.0094 11.61 27.5733 11.8787L17.5733 18.032C17.1003 18.3234 16.5556 18.4777 16 18.4777C15.4444 18.4777 14.8997 18.3234 14.4267 18.032L4.42667 11.88C3.99056 11.6114 3.63049 11.2356 3.38076 10.7884C3.13102 10.3412 2.99994 9.83753 3 9.32533V9"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </dt>
+                        <dd>info@jannatlibya.ly</dd>
+                    </div>
+                </dl>
+                <svg width="2" height="324" viewBox="0 0 2 324" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.75 0.75L0.749986 322.75" stroke="url(#paint0_linear_14_553)" stroke-width="1.5"
+                        stroke-linecap="round" />
+                    <defs>
+                        <linearGradient id="paint0_linear_14_553" x1="-0.5" y1="0.75" x2="-0.500014"
+                            y2="322.75" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.15" stop-color="#5A83A1" stop-opacity="0.4" />
+                            <stop offset="0.5" stop-color="white" />
+                            <stop offset="0.85" stop-color="#5A83A2" stop-opacity="0.4" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="bg-white pt-10 px-16 pb-4 grid gap-y-6 justify-items-center items-start content-start">
+                    <input type="text" name="name" value=""
+                        class="appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded shadow"
+                        placeholder="الاسم" />
+                    <input type="text" name="name" value=""
+                        class="appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded shadow"
+                        placeholder="عنوان الرسالة" />
+                    <textarea placeholder="الرسالة" rows="2" cols=""
+                        class="appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded shadow"></textarea>
+                    <button type="submit"
+                        class="bg-blue-900 text-white py-3 px-12 rounded shadow font-semibold">ارسال</button>
+                </div>
             </div>
         </section>
     </x-slot:main>
