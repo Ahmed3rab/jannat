@@ -20,7 +20,10 @@
                             src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
                     </div>
                     <div class="z-20 flex-1">
-                        <div class="text-primary-gray px-8 py-9 bg-white rounded-md shadow-lg">
+                        <div class="relative text-primary-gray px-8 py-9 bg-white rounded-tr-md rounded-b-md" style="box-shadow: 0px 3px 14px 2px rgba(0, 66, 116, 0.28);">
+                            <div class="absolute bottom-full start-0 bg-promoted-badge text-primary font-semibold px-6 py-2 rounded-t">
+                                <span>مميز</span>
+                            </div>
                             <dl class="flex items-center justify-between">
                                 <dt class="text-2xl font-semibold text-gray-800">Villa With two stories</dt>
                                 <dd class="flex items-center space-x-2">
