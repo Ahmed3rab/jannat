@@ -342,18 +342,99 @@
         <section id="bento" class="mt-56 max-w-7xl mx-auto">
             <div class="grid grid-cols-1 grid-row-2 gap-20">
                 <div class="grid grid-cols-3 grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
-                    @for ($i = 0; $i < 5; $i++)
-                        <div class="bg-blue-600  h-60 w-60 @if ($i == 1) h-full row-span-2 @endif">
+                    <div class="text-primary self-center grid justify-items-center">
+                        <h3 class="text-5xl font-bold">اكتشف بالمدينة</h3>
+                        <svg class="my-8" width="203" height="1" viewBox="0 0 203 1" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="202.675" y1="0.5" x2="0.000183148" y2="0.500018" stroke="#2270AB" />
+                        </svg>
+                        <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">ابحث بالمدينة أو المنطقة
+                            لتجد العقار المناسب لك</p>
+                    </div>
+                    <div class="relative rounded-md h-[624px] w-[400px] row-span-2"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                    @endfor
-                </div>
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="relative rounded-md h-[296px] w-[400px]"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
+                        </div>
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
 
-                <div class="grid grid-cols-3 grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
-                    @for ($i = 0; $i < 4; $i++)
-                        <div
-                            class="bg-blue-600  h-60 w-60 @if ($i == 0) h-full row-span-2 @endif @if ($i == 3) w-full col-span-2 @endif">
+                    <div class="relative rounded-md h-[296px] w-[400px]"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                    @endfor
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="relative rounded-md h-[296px] w-[400px]"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
+                        </div>
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
+                    <div class="relative rounded-md h-[296px] w-[400px]"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
+                        </div>
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="relative rounded-md h-[296px] w-[400px]"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
+                        </div>
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+
+                    <div class="row-span-2 text-primary self-center grid justify-items-center">
+                        <h3 class="text-5xl font-bold">اكتشف بالمدينة</h3>
+                        <svg class="my-8" width="203" height="1" viewBox="0 0 203 1" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="202.675" y1="0.5" x2="0.000183148" y2="0.500018" stroke="#2270AB" />
+                        </svg>
+                        <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">ابحث بالمدينة أو المنطقة
+                            لتجد العقار المناسب لك</p>
+                    </div>
+                    <div class="col-span-2 rounded-md relative h-[296px] w-full"
+                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="absolute inset-0 z-20 flex items-center justify-center">
+                            <span class="text-white text-4xl font-semibold">طرابلس</span>
+                        </div>
+                        <img class="rounded-md object-cover h-full w-full"
+                            src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="">
+                    </div>
+
                 </div>
             </div>
         </section>
