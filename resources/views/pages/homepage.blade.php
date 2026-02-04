@@ -4,15 +4,15 @@
     </x-slot:header>
     <x-slot:main>
         <section class="mx-auto w-full max-w-[1440px]">
-            <div class="flex items-center justify-between space-x-20">
+            <div class="flex items-center justify-between gap-x-20">
                 <button type="button" style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
-                    class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
+                    class="order-last ltr:order-first cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.7284 19.5L8.23877 12L15.7284 4.5" stroke="#004274" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="flex-1 flex items-center justify-start -space-x-14">
+                <div class="order-2 flex-1 flex items-center justify-start -space-x-14">
                     <div class="rounded h-[522px] w-[696px] relative"
                         style="box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)">
                         <div class="rounded absolute inset-0 bg-black/20"></div>
@@ -24,18 +24,20 @@
                             style="box-shadow: 0px 3px 14px 2px rgba(0, 66, 116, 0.28);">
                             <div
                                 class="absolute bottom-full start-0 bg-promoted-badge text-primary font-semibold px-6 py-2 rounded-t">
-                                <span>مميز</span>
+                                <span>{{ __('content.featured') }}</span>
                             </div>
                             <dl class="flex items-center justify-between">
-                                <dt class="text-2xl font-semibold text-gray-800">Villa With two stories</dt>
+
+                                <dt class="text-2xl font-semibold text-gray-800">فيلا بطابقين وملحق</dt>
                                 <dd class="flex items-center space-x-2">
-                                    <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">For
-                                        Sale</span>
-                                    <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">For
-                                        Sale</span>
+                                    <span
+                                        class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.for_sale') }}</span>
+                                    <span
+                                        class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.residance') }}</span>
                                 </dd>
                             </dl>
-                            <p class="my-6">Near Masjid Al-Hassan & Al-Hussain, Bawabet Al-Jebs, Tripoli.</p>
+
+                            <p class="my-6 font-normal">بالقرب من مسجد الحسن والحسين، بوابة الجبس, طرابلس.</p>
                             <div class="mt-6 flex items-center justify-between">
                                 <dl class="flex items-center space-x-6">
                                     <div class="flex items-center space-x-1.5">
@@ -57,7 +59,7 @@
                                             </svg>
                                         </dt>
                                         <dd>
-                                            400 SM
+                                            400 م.م
                                         </dd>
                                     </div>
                                     <div class="flex items-center space-x-1.5">
@@ -93,7 +95,7 @@
 
                                         </dt>
                                         <dd>
-                                            220 SM
+                                            220 م.م
                                         </dd>
                                     </div>
                                     <div class="text-sm flex items-center space-x-1.5">
@@ -117,14 +119,14 @@
                                     </div>
                                 </dl>
                                 <p class="font-bold text-primary text-lg">
-                                    200,0000 LYD
+                                    200,0000 د.ل
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <button type="button" style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
-                    class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
+                    class="order-first ltr:order-last cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.23853 4.5L15.7281 12L8.23853 19.5" stroke="#004274" stroke-width="1.5"
@@ -177,7 +179,8 @@
                 </button>
             </div>
         </section>
-        <section id="latest" class="relative  flex flex-col justify-center mt-44 w-full bg-primary">
+        <section id="latest" class="relative  flex flex-col justify-center mt-44 w-full"
+            style="background: linear-gradient(279.24deg, #004274 35.07%, #2270AB 100%);">
             <div class="absolute inset-0 overflow-hidden">
                 <svg class="pointer-events-none absolute bottom-0 right-0 h-[200%] w-auto translate-x-1/3 translate-y-1/4 opacity-90"
                     width="1104" height="1140" viewBox="0 0 1104 1140" fill="none"
@@ -197,45 +200,44 @@
             <div class="relative z-20 -mt-16 mx-auto w-full max-w-7xl bg-white px-8 pb-10 pt-12 rounded-lg shadow-lg"
                 style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);">
                 <form class="flex items-center space-x-12">
-                    <div class="flex-1 flex items-center justify-between">
+                    <div class="flex-1 flex items-center gap-x-6">
                         <select
-                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-48 rounded focus:ring-primary focus:outline-0">
-                            <option value="test">Select City</option>
+                            class="px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-48 rounded focus:ring-primary focus:outline-0">
+                            <option value="test">{{ __('content.select.city') }}</option>
                         </select>
                         <select
-                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-48 rounded focus:ring-primary focus:outline-0">
-                            <option value="test">Select Town</option>
+                            class="px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-48 rounded focus:ring-primary focus:outline-0">
+                            <option value="test">{{ __('content.select.town') }}</option>
                         </select>
                         <select
-                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-56 rounded focus:ring-primary focus:outline-0">
-                            <option value="test">Select Property Type</option>
+                            class="px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-56 rounded focus:ring-primary focus:outline-0">
+                            <option value="test">{{ __('content.select.property_type') }}</option>
                         </select>
                         <input type="text" name="min"
-                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] w-32 rounded focus:ring-primary focus:outline-0"
-                            placeholder="Min Price">
+                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] w-40 rounded focus:ring-primary focus:outline-0"
+                            placeholder="{{ __('content.price.min') }}">
                         <input type="text" name="min"
-                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] w-32 rounded focus:ring-primary focus:outline-0"
-                            placeholder="Max Price">
+                            class="appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] w-40 rounded focus:ring-primary focus:outline-0"
+                            placeholder="{{ __('content.price.max') }}">
                     </div>
                     <button type="submit"
-                        class="appearance-none rounded-md bg-primary text-white font-bold py-2.5 px-8 uppercase text-sm">
-                        Filter Results
-                    </button>
+                        class="appearance-none rounded-md bg-primary text-white font-bold py-2.5 px-8 uppercase text-sm">{{ __('content.filter') }}</button>
                 </form>
             </div>
             <div class="relative z-10 grid grid-cols-3 gap-13 mt-16 mx-40 -mb-20">
                 @for ($i = 0; $i < 3; $i++)
-                    <div class="w-[500px] rounded-md shadow-xl bg-white">
+                    <div class="relative w-[500px] rounded-md shadow-xl hover:shadow-2xl transition group bg-white">
+                        <a href="#" class="absolute inset-0 z-20"></a>
                         <div class="relative">
-                            <div class="absolute inset-0 rounded-t-md bg-black/20 z-10"></div>
+                            <div class="absolute inset-0 rounded-t-md bg-black/30 z-10"></div>
                             <div class="absolute top-6 end-6 z-20">
                                 <dl class="flex items-center justify-between">
                                     <dt class="invisible">Tags</dt>
                                     <dd class="flex items-center space-x-2">
-                                        <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">For
-                                            Sale</span>
-                                        <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">For
-                                            Sale</span>
+                                        <span
+                                            class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.for_sale') }}</span>
+                                        <span
+                                            class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.residance') }}</span>
                                     </dd>
                                 </dl>
                             </div>
@@ -243,11 +245,9 @@
                                 src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                 alt="" />
                         </div>
-                        <div class="pb-8 px-8 pt-8 text-gray-800">
-                            <a href="#" class="text-xl font-semibold">Villa With Two Stories</a>
-                            <p class="mt-3 font-normal">Near Masjid Al-Hassan & Al-Hussain, Bawabet Al-Jebs, Tripoli.
-                            </p>
-
+                        <div class="pb-8 px-8 pt-6 text-gray-800">
+                            <h3 class="text-xl font-semibold group-hover:text-primary">فيلا بطابقين وملحق</h3>
+                            <p class="mt-4 font-normal">بالقرب من مسجد الحسن والحسين، بوابة الجبس, طرابلس.</p>
                             <div class="mt-6 flex items-center justify-between">
                                 <dl class="flex items-center space-x-6">
                                     <div class="flex items-center space-x-1.5">
@@ -270,7 +270,7 @@
                                             </svg>
                                         </dt>
                                         <dd>
-                                            400 SM
+                                            400 م.م
                                         </dd>
                                     </div>
                                     <div class="flex items-center space-x-1.5">
@@ -307,7 +307,7 @@
 
                                         </dt>
                                         <dd>
-                                            220 SM
+                                            220 م.م
                                         </dd>
                                     </div>
                                     <div class="text-sm flex items-center space-x-1.5">
@@ -331,7 +331,7 @@
                                     </div>
                                 </dl>
                                 <p class="font-bold text-primary text-lg">
-                                    200,0000 LYD
+                                    200,0000 د.ل
                                 </p>
                             </div>
                         </div>
@@ -438,9 +438,11 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="relative mt-50 w-full max-w-[1440px] mx-auto rounded shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]" style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
+        <section id="contact"
+            class="relative mt-50 w-full max-w-[1440px] mx-auto rounded shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
+            style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
             <div class="absolute inset-0 overflow-hidden">
-                <x-svgs.contact/>
+                <x-svgs.contact />
             </div>
             <div class="absolute start-14 -top-16">
                 <div class="bg-white p-10 font-bold text-4xl rounded text-primary"
