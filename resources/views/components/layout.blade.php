@@ -23,13 +23,13 @@
 
 <body class="min-h-screen">
     {{ $header }}
-    <main class="mt-32">
+    <main class="mt-20 lg:mt-32">
         {{ $main }}
     </main>
     {{ $slot }}
-    <footer class="mt-32 max-w-[1440px] mx-auto bg-primary rounded-t"
+    <footer class="mt-32 px-4 lg:px-0 max-w-[1440px] mx-auto bg-primary lg:rounded-t"
         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
-        <div class="py-8 grid items-center justify-items-center text-white font-semibold">
+        <div class="py-8 grid items-center justify-items-center text-white text-center font-semibold">
             © 2024 شركة محمد الجهاني للعقارات. جميع الحقوق محفوظة.
         </div>
     </footer>
