@@ -1,5 +1,5 @@
 <header class="bg-white">
-    <nav class="flex items-center justify-between px-6 lg:px-10 py-6 lg:rounded-b mx-auto w-full lg:max-w-[1440px] bg-primary text-white"
+    <nav class="flex items-center justify-between px-6 lg:px-10 py-6 xl:rounded-b mx-auto w-full lg:max-w-[1440px] bg-primary text-white"
         style="box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16)">
         <a href="{{ route('homepage') }}">
             <x-svgs.logo-white />
