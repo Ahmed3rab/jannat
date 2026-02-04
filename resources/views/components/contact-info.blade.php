@@ -20,7 +20,7 @@
                     stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </dt>
-        <dd>+218-911234567</dd>
+        <dd dir="ltr">+218-911234567</dd>
     </div>
     <div class="flex items-center space-x-8 text-white font-semibold">
         <dt>
@@ -30,7 +30,7 @@
                     stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </dt>
-        <dd>+218-911234567</dd>
+        <dd dir="ltr">+218-911234567</dd>
     </div>
     <div class="flex items-center space-x-8 text-white font-semibold">
         <dt>
@@ -40,6 +40,6 @@
                     stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
         </dt>
-        <dd>info@jannatlibya.ly</dd>
+        <dd dir="ltr">info@jannatlibya.ly</dd>
     </div>
 </dl>

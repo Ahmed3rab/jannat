@@ -1,8 +1,9 @@
-<div class="relative lg:w-[500px] rounded-md shadow-xl hover:shadow-2xl transition group bg-white">
+<div
+    class="relative w-full max-w-[420px] lg:max-w-[500px] rounded-md shadow-xl hover:shadow-2xl transition group bg-white">
     <a href="#" class="absolute inset-0 z-20"></a>
     <div class="relative">
         <div class="absolute inset-0 rounded-t-md bg-black/30 z-10"></div>
-        <dl class="absolute lg:hidden top-6 start-6 z-20">
+        <dl class="absolute top-6 start-6 z-20">
             <dt class="hidden invisible">{{ __('content.featured') }}</dt>
             <dd class="flex">
                 <span
