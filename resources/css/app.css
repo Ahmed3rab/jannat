@@ -15,3 +15,7 @@
     --color-badge: #CBDFEE;
     --breakpoint-3xl: 120rem;
 }
+
+[x-cloak] {
+    display: none !important;
+}
