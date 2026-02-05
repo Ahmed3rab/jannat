@@ -20,20 +20,20 @@
                 </dd>
             </dl>
         </div>
-        <img class="h-[280px] lg:h-[364px] w-full object-cover rounded-t-md"
+        <img class="h-[280px] lg:h-[364px] xl:h-[280px] 2xl:h-[364px] w-full object-cover rounded-t-md"
             src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" />
     </div>
     <div class="pb-8 px-4 lg:px-8 pt-6 text-gray-800">
         <div class="flex items-center justify-between">
             <h3 class="text-xl font-semibold group-hover:text-primary">فيلا بطابقين وملحق</h3>
-            <p class="lg:hidden font-bold text-primary text-lg">
+            <p class="lg:hidden xl:block 2xl:hidden font-bold text-primary text-lg">
                 200,0000 د.ل
             </p>
         </div>
         <p class="mt-4 font-normal">بالقرب من مسجد الحسن والحسين، بوابة الجبس, طرابلس.</p>
         <div class="mt-6 flex items-center justify-between">
-            <dl class="flex items-center space-x-6">
+            <dl class="flex items-center space-x-6 xl:space-x-4 2xl:space-x-6">
                 <div class="flex items-center space-x-1.5">
                     <dt>
                         <svg class="size-5 text-slate-500" width="24" height="24" viewBox="0 0 24 24"
@@ -109,7 +109,7 @@
                     </dd>
                 </div>
             </dl>
-            <p class="hidden lg:block font-bold text-primary text-lg">
+            <p class="hidden lg:block xl:hidden 2xl:block font-bold text-primary text-lg">
                 200,0000 د.ل
             </p>
         </div>

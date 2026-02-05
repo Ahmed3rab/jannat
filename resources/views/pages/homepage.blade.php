@@ -3,18 +3,19 @@
         @include('components.header')
     </x-slot:header>
     <x-slot:main>
-        <section class="px-6 lg:px-10 xl:px-0 mx-auto w-full max-w-[1440px]">
+        <section id="slider" class="px-6 lg:px-10 2xl:px-0 mx-auto w-full max-w-[1440px]">
             <div class="flex items-center justify-between gap-x-20">
                 <button type="button" style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
                     class="hidden order-last ltr:order-first cursor-pointer xl:flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.7284 19.5L8.23877 12L15.7284 4.5" stroke="#004274" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
                 <div class="hidden lg:block order-2 flex-1">
                     <div class="flex items-center justify-start lg:justify-center -space-x-14">
-                        <div class="rounded h-[522px] w-[696px] lg:h-[400px] lg:w-[500px] lg:aspect-video xl:h-[522px] xl:w-[696px] relative"
+                        <div class="rounded h-[522px] w-[696px] lg:h-[400px] lg:w-[500px] lg:aspect-video 2xl:h-[522px] 2xl:w-[696px] relative"
                             style="box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)">
                             <div class="rounded absolute inset-0 bg-black/20"></div>
                             <img class="rounded h-full w-full object-cover"
@@ -141,7 +142,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="mt-10 flex items-center justify-center space-x-1.5 pb-2">
+            <div class="mt-10 lg:mt-16 flex items-center justify-center space-x-1.5 pb-2">
                 <button>
                     <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -186,43 +187,45 @@
                 </button>
             </div>
         </section>
-        <section id="latest" class="mt-44 w-full">
-            <div class="flex flex-col justify-center relative px-4 lg:px-10 xl:px-0"
+        <section id="latest" class="mt-44 xl:mt-40 2xl:mt-44 w-full">
+            <div class="flex flex-col justify-center relative px-4 lg:px-10"
                 style="background: linear-gradient(279.24deg, #004274 35.07%, #2270AB 100%);">
                 <div class="absolute inset-0 overflow-hidden">
                     <x-svgs.latest />
                 </div>
-                <div class="relative z-20 -mt-16 mx-auto w-full max-w-7xl lg:max-w-3xl xl:max-w-7xl bg-white px-8 pb-6 lg:pb-10 pt-12 rounded-lg shadow-lg"
+                <div class="relative z-20 -mt-16 mx-auto w-full max-w-7xl lg:max-w-3xl xl:max-w-6xl 3xl:max-w-7xl bg-white px-8 pb-6 lg:pb-10 pt-12 rounded-lg shadow-lg"
                     style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);">
                     <form class="flex flex-col xl:flex-row items-center gap-6 sm:gap-8 xl:gap-12">
                         <div
                             class="flex-1 grid grid-cols-2 sm:grid-cols-6 gap-6 w-full xl:flex xl:items-center xl:gap-x-6">
                             <select
-                                class="col-span-2 sm:col-span-3 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-full xl:w-48 rounded focus:ring-primary focus:outline-0">
+                                class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.city') }}</option>
                             </select>
                             <select
-                                class="sm:col-span-3 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold w-full xl:w-48 rounded focus:ring-primary focus:outline-0">
+                                class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.town') }}</option>
                             </select>
                             <select
-                                class="sm:col-span-2 w-full xl:w-56  px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                                class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.property_type') }}</option>
                             </select>
                             <input type="text" name="min"
-                                class="sm:col-span-2 w-full xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057]  rounded focus:ring-primary focus:outline-0"
+                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] rounded focus:ring-primary focus:outline-0"
                                 placeholder="{{ __('content.price.min') }}">
                             <input type="text" name="min"
-                                class="sm:col-span-2 w-full xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057]  rounded focus:ring-primary focus:outline-0"
+                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] rounded focus:ring-primary focus:outline-0"
                                 placeholder="{{ __('content.price.max') }}">
                         </div>
                         <button type="submit"
-                            class="w-full appearance-none rounded-md bg-primary text-white font-bold py-2.5 px-8 uppercase text-sm">{{ __('content.filter') }}</button>
+                            class="w-full xl:w-auto 3xl:w-full appearance-none rounded-md bg-primary text-white font-bold py-2.5 px-8 uppercase text-sm">
+                            <span>{{ __('content.filter') }}</span>
+                        </button>
                     </form>
                 </div>
 
-                <div
-                    class="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-12 md:gap-6 lg:gap-12 mt-16 xl:mx-40 -mb-20">
+                <div {{-- xl:mx-40 --}}
+                    class="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-12 md:gap-6 lg:gap-12 xl:gap-6 3xl:gap-12 mt-16 -mb-20 2xl:max-w-[1440px] mx-auto">
                     @for ($i = 0; $i < 4; $i++)
                         <x-properties.card />
                     @endfor
@@ -240,8 +243,8 @@
                 </svg>
             </a>
         </section>
-        <section id="bento" class="mt-40 lg:mt-32 xl:mt-56 px-4 lg:px-10 xl:px-0 max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 grid-row-2 gap-20 sm:gap-32">
+        <section id="bento" class="mt-40 lg:mt-32 xl:mt-56 px-4 lg:px-10 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 grid-row-2 gap-20 sm:gap-32 xl:gap-20">
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
                     <div class="text-primary self-center grid justify-items-center">
                         <h3 class="text-5xl sm:text-4xl font-bold">{{ __('content.discover.by_city.title') }}</h3>
@@ -252,7 +255,7 @@
                         <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">
                             {{ __('content.discover.by_city.subtitle') }}</p>
                     </div>
-                    <div class="lg:row-span-2 relative rounded-md h-[240px] lg:h-[512px] xl:h-[624px] w-full xl:w-[400px]"
+                    <div class="lg:row-span-2 relative rounded-md h-[240px] lg:h-[512px] xl:h-[624px] w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -262,7 +265,7 @@
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="sm:col-span-2 lg:col-span-1 relative rounded-md h-[240px] w-full xl:h-[296px] xl:w-[400px]"
+                    <div class="sm:col-span-2 lg:col-span-1 relative rounded-md h-[240px] xl:h-[296px] w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -273,7 +276,7 @@
                             alt="">
                     </div>
 
-                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px] xl:w-[400px]"
+                    <div class="relative rounded-md h-[240px] xl:h-[296px] w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -283,7 +286,7 @@
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px] xl:w-[400px]"
+                    <div class="relative rounded-md h-[240px] xl:h-[296px] w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -296,8 +299,7 @@
                 </div>
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
-
-                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px] xl:w-[400px]"
+                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px] 2xl:w-[400px]"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -307,7 +309,7 @@
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="sm:order-first relative rounded-md h-[240px] w-full xl:h-[296px] xl:w-[400px]"
+                    <div class="sm:order-first relative rounded-md h-[240px] w-full xl:h-[296px] 2xl:w-[400px]"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -342,7 +344,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full max-w-[1440px] mx-auto">
+        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-[1024px] 2xl:max-w-[1440px] mx-auto">
             <div class="px-4 lg:px-0 relative xl:rounded shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
                 style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
                 <div class="absolute inset-0 overflow-hidden">
@@ -353,7 +355,7 @@
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">{{ __('content.be_in_touch') }}</div>
                 </div>
                 <div
-                    class="relative z-10 px-4 lg:px-10 xl:px-28 py-32 sm:py-28 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-6 xl:gap-24">
+                    class="relative z-10 px-4 lg:px-10 xl:px-16 2xl:px-28 py-32 sm:py-28 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-6 xl:gap-24">
                     <x-contact-info />
                     <svg class="hidden lg:block" width="2" height="324" viewBox="0 0 2 324" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
