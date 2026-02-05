@@ -12,34 +12,34 @@
             </svg>
         </button>
         <ul class="hidden lg:flex items-center space-x-6 font-bold">
-            <li class="">
+            <li class="group">
                 <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
                     <span class="relative">الرئيسية</span>
                 </span>
             </li>
 
-            <li class="">
+            <li class="group">
                 <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
                     <span class="relative">سكني</span>
                 </span>
             </li>
-            <li class="">
+            <li class="group">
                 <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
                     <span class="relative">تجاري</span>
                 </span>
             </li>
-            <li class="">
+            <li class="group">
                 <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
                     <span class="relative">شقق</span>
                 </span>
             </li>
-            <li class="">
+            <li class="group">
                 <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[0.5px] after:bg-white after:content-['']">
+                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
                     <span class="relative">تواصل معنا</span>
                 </span>
             </li>
