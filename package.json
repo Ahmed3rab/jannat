@@ -16,6 +16,7 @@
         "vite": "^7.0.7"
     },
     "dependencies": {
+        "@glidejs/glide": "^3.7.1",
         "alpinejs": "^3.15.8"
     }
 }
