@@ -4,13 +4,72 @@
         <a href="{{ route('homepage') }}">
             <x-svgs.logo-white />
         </a>
-        <button type="button" class="lg:hidden size-8">
-            <svg class="text-white" data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5"
-                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round">
-                </path>
-            </svg>
-        </button>
+
+        <div class="lg:hidden inline-flex">
+            <div x-data="{
+                open: false,
+                toggle() {
+                    if (this.open) {
+                        return this.close()
+                    }
+
+                    this.$refs.button.focus()
+
+                    this.open = true
+                },
+                close(focusAfter) {
+                    if (!this.open) return
+
+                    this.open = false
+
+                    focusAfter && focusAfter.focus()
+                }
+            }" x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()" x-id="['dropdown-button']"
+                class="relative inline-flex">
+                <!-- Button -->
+
+                <button x-ref="button" x-on:click="toggle()" :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')" type="button" class="relative size-8">
+
+                    <svg class="text-white" data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5"
+                        stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Panel -->
+                <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')" x-cloak
+                    class="absolute left-0 min-w-48 rounded-lg shadow-sm mt-10 z-50 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
+                    <a href="#new"
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">الرئيسية</a>
+
+                    <a href="#edit"
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">سكني</a>
+
+                    <a href="#edit"
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تجاري</a>
+
+                    <a href="#edit"
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">شقق</a>
+
+                    <a href="#edit"
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تواصل
+                        معنا</a>
+                    <div class="mt-4 border-t border-gray-200">
+
+                        <a href="#"
+                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
+
+                        <a href="#"
+                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <ul class="hidden lg:flex items-center space-x-6 font-bold">
             <li class="group">
                 <span
