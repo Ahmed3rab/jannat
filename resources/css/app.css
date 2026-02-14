@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import "@glidejs/glide/dist/css/glide.core.min.css";
 @plugin "@tailwindcss/forms";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
