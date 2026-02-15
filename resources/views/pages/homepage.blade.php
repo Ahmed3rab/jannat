@@ -230,7 +230,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-[1024px] 2xl:max-w-[1440px] mx-auto">
+        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-6xl 2xl:max-w-[1440px] mx-auto">
             <div class="px-4 lg:px-0 relative xl:rounded shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
                 style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
                 <div class="absolute inset-0 overflow-hidden">
