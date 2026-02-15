@@ -1,5 +1,5 @@
-<div class="flex items-center justify-center">
-    <div class="rounded h-[522px] w-[696px] lg:h-[400px] lg:w-[500px] 2xl:h-[522px] 2xl:w-[696px] lg:aspect-video relative"
+<div {{ $attributes->class(['flex items-center justify-center']) }}>
+    <div class="rounded h-[522px] max-w-[696px] lg:h-[400px] lg:max-w-[500px] 2xl:h-[522px] 2xl:max-w-[696px] lg:aspect-video relative"
         style="box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)">
         <div class="rounded absolute inset-0 bg-black/20"></div>
         <img class="rounded h-full w-full object-cover"

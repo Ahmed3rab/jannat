@@ -15,8 +15,20 @@
     --color-promoted-badge: #F4E192;
     --color-badge: #CBDFEE;
     --breakpoint-3xl: 120rem;
+
 }
 
 [x-cloak] {
     display: none !important;
+}
+
+@layer components {
+    .glide__bullet span {
+        @apply block h-4 w-4 rounded-full bg-[#E8F1F8] transition-all duration-300;
+    }
+
+    .glide__bullet--active span {
+        @apply w-8 bg-primary;
+    }
+
 }

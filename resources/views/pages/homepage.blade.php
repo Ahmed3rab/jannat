@@ -4,84 +4,73 @@
     </x-slot:header>
     <x-slot:main>
         <section id="slider" class="px-6 lg:px-10 2xl:px-0 mx-auto w-full max-w-[1440px]">
-            <div x-data="glide({ perView: 1, type: 'carousel' })" class="glide">
-                <div class="flex items-center justify-between">
-                    <div data-glide-el="controls" class="hidden xl:block ltr:order-last">
-                        <button data-glide-dir=">" type="button"
-                            style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
-                            class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.23853 4.5L15.7281 12L8.23853 19.5" stroke="#004274" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
+            <div class="lg:hidden">
+                <div x-data="glide({ perView: 1, type: 'carousel', gap: 24, breakpoints: { 1024: { perView: 2 }, 768: { perView: 1 } } })" class="glide">
+                    <div class="glide__track overflow-visible" data-glide-el="track">
+                        <ul class="glide__slides overflow-visible">
                             @for ($i = 0; $i < 3; $i++)
-                                <li class="glide__slide">
-                                    <x-properties.featured />
+                                <li class="glide__slide pb-12 px-2">
+                                    <x-properties.card />
                                 </li>
                             @endfor
                         </ul>
                     </div>
-                    <div data-glide-el="controls" class="hidden lg:block ltr:order-first">
-                        <button data-glide-dir="<" type="button"
-                            style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
-                            class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.7284 19.5L8.23877 12L15.7284 4.5" stroke="#004274" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
+                    <div class="mt-10 lg:mt-16 flex items-center justify-center space-x-1.5 pb-2"
+                        data-glide-el="controls[nav]">
+                        @for ($i = 0; $i < 3; $i++)
+                            <button class="glide__bullet cursor-pointer group relative transition-all duration-300"
+                                data-glide-dir="={{ $i }}">
+                                <span class=""></span>
+                            </button>
+                        @endfor
                     </div>
                 </div>
             </div>
-            <div class="mt-10 lg:mt-16 flex items-center justify-center space-x-1.5 pb-2">
-                <button>
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                    </svg>
-                </button>
-                <button>
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                    </svg>
-                </button>
-                <button>
-                    <svg class="fill-primary" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="8" cy="8" r="8" fill="fillCurrent" />
-                    </svg>
-                </button>
-                <button>
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                    </svg>
-                </button>
-                <button>
-                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                        <ellipse cx="8.5" cy="8" rx="8.5" ry="8" fill="#E8F1F8" />
-                    </svg>
-                </button>
+            <div class="hidden lg:block">
+                <div x-data="glide({ perView: 1, type: 'carousel' })" class="glide">
+                    <div class="lg:flex lg:items-center lg:justify-between">
+                        <div data-glide-el="controls" class="hidden lg:block ltr:order-last">
+                            <button data-glide-dir=">" type="button"
+                                style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
+                                class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.23853 4.5L15.7281 12L8.23853 19.5" stroke="#004274" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                @for ($i = 0; $i < 3; $i++)
+                                    <li class="glide__slide">
+                                        <x-properties.featured />
+                                    </li>
+                                @endfor
+                            </ul>
+                        </div>
+                        <div data-glide-el="controls" class="hidden lg:block ltr:order-first">
+                            <button data-glide-dir="<" type="button"
+                                style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
+                                class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7284 19.5L8.23877 12L15.7284 4.5" stroke="#004274" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-10 lg:mt-16 flex items-center justify-center space-x-1.5 pb-2"
+                        data-glide-el="controls[nav]">
+                        @for ($i = 0; $i < 3; $i++)
+                            <button class="glide__bullet cursor-pointer group relative transition-all duration-300"
+                                data-glide-dir="={{ $i }}">
+                                <span class=""></span>
+                            </button>
+                        @endfor
+                    </div>
+                </div>
             </div>
         </section>
         <section id="latest" class="mt-44 xl:mt-40 2xl:mt-44 w-full">

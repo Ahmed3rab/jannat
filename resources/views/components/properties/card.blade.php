@@ -1,5 +1,4 @@
-<div
-    class="relative w-full max-w-[420px] lg:max-w-[500px] rounded-md shadow-xl hover:shadow-2xl transition group bg-white">
+<div {{ $attributes->class(['relative w-full rounded-md shadow-xl hover:shadow-2xl transition group bg-white']) }}>
     <a href="#" class="absolute inset-0 z-20"></a>
     <div class="relative">
         <div class="absolute inset-0 rounded-t-md bg-black/30 z-10"></div>

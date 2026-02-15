@@ -13,6 +13,7 @@ Alpine.data('glide', (options = {}) => ({
 
                 this.instance = new Glide(this.$el, {
                     direction: direction,
+                    animationDuration: 1000,
                     ...options
                 })
                 this.instance.mount()
