@@ -23,7 +23,7 @@
 
 <body class="min-h-screen">
     {{ $header }}
-    <main class="mt-20 xl:mt-32">
+    <main class="mt-20">
         {{ $main }}
     </main>
     {{ $slot }}
