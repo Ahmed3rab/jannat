@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Property;
+use Illuminate\Http\Request;
+
+class PropertyController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        return view('pages.properties.index');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Property $property)
+    {
+    }
+
+}

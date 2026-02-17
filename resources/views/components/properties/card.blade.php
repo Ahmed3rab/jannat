@@ -1,7 +1,8 @@
-<div {{ $attributes->class(['relative w-full rounded-md shadow-xl hover:shadow-2xl transition group bg-white']) }}>
+<div {{ $attributes->class(['relative w-full rounded-xs transition group bg-white']) }}
+    style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
     <a href="#" class="absolute inset-0 z-20"></a>
     <div class="relative">
-        <div class="absolute inset-0 rounded-t-md bg-black/30 z-10"></div>
+        <div class="absolute inset-0 rounded-t-xs bg-black/30 z-10"></div>
         <dl class="absolute top-6 start-6 z-20">
             <dt class="hidden invisible">{{ __('content.featured') }}</dt>
             <dd class="flex">
@@ -19,7 +20,7 @@
                 </dd>
             </dl>
         </div>
-        <img class="h-[280px] lg:h-[364px] xl:h-[280px] 2xl:h-[364px] w-full object-cover rounded-t-md"
+        <img class="h-[280px] lg:h-[364px] xl:h-[280px] 2xl:h-[364px] w-full object-cover rounded-t-xs"
             src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" />
     </div>
