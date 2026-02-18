@@ -114,19 +114,7 @@
                                         stroke-linecap="round" stroke-linejoin="round"></path>
                                 </svg>
                             </button>
-                            <button type="button"
-                                class="cursor-pointer group inline-flex items-center justify-center space-x-3 w-full rounded-sm py-4 px-3 bg-primary hover:bg-white transition ease-in duration-75 "
-                                style="box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25)">
-                                <span class="text-white group-hover:text-primary text-lg font-bold">استفسار عن
-                                    العقار</span>
-                                <svg class="size-6 text-white group-hover:text-primary" data-slot="icon"
-                                    aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
+                            <x-properties.enquiry />
                         </div>
                     </aside>
                 </section>

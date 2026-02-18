@@ -30,6 +30,7 @@ return [
     'message'   => [
         'title' => 'عنوان الرسالة',
         'body' => 'محتوى الرسالة',
+        'phone_number'  => 'رقم الهاتف',
     ],
 
     'contact_details' => 'بيانات التواصل',

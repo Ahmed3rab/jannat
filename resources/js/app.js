@@ -1,8 +1,11 @@
 import Alpine from 'alpinejs'
+import focus from '@alpinejs/focus'
+
 import Glide from '@glidejs/glide'
 
 window.Alpine = Alpine
 
+Alpine.plugin(focus)
 Alpine.data('glide', (options = {}) => ({
     instance: null,
 
