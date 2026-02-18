@@ -1,4 +1,4 @@
-<header class="bg-primary pb-32"
+<header class="bg-primary"
     style="background: linear-gradient(279.24deg, #004274 35.07%, #2270AB 100%);box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
     <nav
         class="flex items-center justify-between px-6 lg:px-10 py-6 xl:rounded-b mx-auto w-full lg:max-w-[1440px] bg-white text-primary">
@@ -151,9 +151,9 @@
             </li>
         </ul>
     </nav>
-    <div class="mt-28 flex items-center justify-center">
-        <h2 class="text-center text-7xl font-bold text-white">
-            {{ $title }}
+    <div class="flex items-center justify-center">
+        <h2 class="{{ $title ? 'py-32' : 'py-16' }} text-center text-7xl font-bold text-white">
+            {{ $title ?? '' }}
         </h2>
     </div>
 </header>
