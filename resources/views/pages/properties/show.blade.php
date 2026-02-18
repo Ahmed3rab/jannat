@@ -102,18 +102,7 @@
                             </div>
                         </dl>
                         <div class="grid gap-6">
-                            <button type="button"
-                                class="cursor-pointer group hover:bg-primary transition ease-in duration-75 inline-flex items-center justify-center space-x-3 w-full bg-white rounded-sm py-4 px-3"
-                                style="box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25)">
-                                <span class="text-primary group-hover:text-white text-lg font-bold">مشاركة</span>
-                                <svg class="size-6 text-primary group-hover:text-white" data-slot="icon"
-                                    aria-hidden="true" fill="none" stroke-width="1.5" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
+                            <x-properties.share />
                             <x-properties.enquiry />
                         </div>
                     </aside>
