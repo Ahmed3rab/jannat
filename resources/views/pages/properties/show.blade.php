@@ -5,17 +5,7 @@
     <x-slot:main>
         <section id="gallery" class="relative w-full mx-auto max-w-7xl grid grid-cols-4 grid-rows-2 gap-5">
             <div class="z-30 absolute inset-0 flex items-end justify-start ps-8 pb-8">
-                <button type="button"
-                    class="cursor-pointer bg-white transition ease-in duration-50 group hover:bg-primary px-4 py-2 rounded-sm text-primary inline-flex space-x-2 items-center">
-                    <svg class="text-primary group-hover:text-white size-5" data-slot="icon" aria-hidden="true"
-                        fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <span class="text-primary font-bold group-hover:text-white">عرض كل الصور</span>
-                </button>
+                <x-properties.details.gallery />
             </div>
 
             <div class="col-span-2 row-span-2 rounded-sm" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">

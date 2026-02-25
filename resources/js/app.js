@@ -1,28 +1,29 @@
-import Alpine from 'alpinejs'
-import focus from '@alpinejs/focus'
+import Alpine from "alpinejs";
+import focus from "@alpinejs/focus";
 
-import Glide from '@glidejs/glide'
+import Glide from "@glidejs/glide";
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
+window.Glide = Glide;
 
-Alpine.plugin(focus)
-Alpine.data('glide', (options = {}) => ({
+Alpine.plugin(focus);
+Alpine.data("glide", (options = {}) => ({
     instance: null,
 
     init() {
         this.$nextTick(() => {
             requestAnimationFrame(() => {
-                const direction = document.documentElement.dir || 'ltr'
+                const direction = document.documentElement.dir || "ltr";
 
                 this.instance = new Glide(this.$el, {
                     direction: direction,
                     animationDuration: 1000,
-                    ...options
-                })
-                this.instance.mount()
-            })
-        })
-    }
-}))
+                    ...options,
+                });
+                this.instance.mount();
+            });
+        });
+    },
+}));
 
-Alpine.start()
+Alpine.start();
