@@ -6,16 +6,10 @@
         <dl class="grid grid-cols-3 xl:grid-cols-5 justify-items-start 2xl:justify-items-center gap-6 2xl:gap-10">
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
-                    <svg class="size-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 9V12" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M12 16.01L12.01 15.9989" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M2 7.99998L11.7317 3.13414C11.9006 3.04969 12.0994 3.04968 12.2683 3.13414L22 7.99998"
-                            stroke="#475057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M20 11V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V11" stroke="#475057"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        class="size-6" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M12 9v3M12 16.01l.01-.011M2 8l9.732-4.866a.6.6 0 0 1 .536 0L22 8M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" />
                     </svg>
                     <span class="text-primary-gray">النوع</span>
                 </dt>
@@ -35,52 +29,25 @@
             </div>
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
-                    <svg class="size-6 text-red-50" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2 21.4V2.6C2 2.26863 2.26863 2 2.6 2H21.4C21.7314 2 22 2.26863 22 2.6V9.4C22 9.73137 21.7314 10 21.4 10H10.6C10.2686 10 10 10.2686 10 10.6V21.4C10 21.7314 9.73137 22 9.4 22H2.6C2.26863 22 2 21.7314 2 21.4Z"
-                            stroke="#475057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M16 10V7" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M10 10V7" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M10 16H7" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M10 10H7" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                    <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M2 21.4V2.6a.6.6 0 0 1 .6-.6h18.8a.6.6 0 0 1 .6.6v6.8a.6.6 0 0 1-.6.6H10.6a.6.6 0 0 0-.6.6v10.8a.6.6 0 0 1-.6.6H2.6a.6.6 0 0 1-.6-.6M16 10V7M10 10V7M10 16H7M10 10H7" />
                     </svg>
-
                     <span class="text-primary-gray">المساحة</span>
                 </dt>
                 <dd class="font-semibold text-primary-gray">500 م,م</dd>
             </div>
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
-                    <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 21V3.6C3 3.26863 3.26863 3 3.6 3H21" stroke="#475057" stroke-width="1.5" />
-                        <path d="M17 21H20.4C20.7314 21 21 20.7314 21 20.4V17" stroke="#475057" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M21 7V9" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M21 12V14" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M7 21H9" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M12 21H14" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M3 4C3.55228 4 4 3.55228 4 3C4 2.44772 3.55228 2 3 2C2.44772 2 2 2.44772 2 3C2 3.55228 2.44772 4 3 4Z"
-                            fill="#475057" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M3 22C3.55228 22 4 21.5523 4 21C4 20.4477 3.55228 20 3 20C2.44772 20 2 20.4477 2 21C2 21.5523 2.44772 22 3 22Z"
-                            fill="#475057" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M21 4C21.5523 4 22 3.55228 22 3C22 2.44772 21.5523 2 21 2C20.4477 2 20 2.44772 20 3C20 3.55228 20.4477 4 21 4Z"
-                            fill="#475057" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                    <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-width="1.5" d="M3 21V3.6a.6.6 0 0 1 .6-.6H21" />
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M17 21h3.4a.6.6 0 0 0 .6-.6V17M21 7v2M21 12v2M7 21h2M12 21h2" />
+                        <path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5"
+                            d="M3 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2M3 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2M21 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                     </svg>
                     <span class="text-primary-gray">المسقوف</span>
                 </dt>
@@ -88,23 +55,12 @@
             </div>
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
-                    <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 19V21" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M11 12V16" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M16 12V16H14" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M21 12H8" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M5 12H3" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M3 5L12 3L21 5" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M21 8.6V20.4C21 20.7314 20.7314 21 20.4 21H3.6C3.26863 21 3 20.7314 3 20.4V8.6C3 8.26863 3.26863 8 3.6 8H20.4C20.7314 8 21 8.26863 21 8.6Z"
-                            stroke="#475057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M11 19v2M11 12v4M16 12v4h-2M21 12H8M5 12H3M3 5l9-2 9 2" />
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M21 8.6v11.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V8.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6" />
                     </svg>
                     <span class="text-primary-gray">الطوابق</span>
                 </dt>
@@ -112,34 +68,25 @@
             </div>
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
-                    <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M21 4V20C21 21.1046 20.1046 22 19 22H5C3.89543 22 3 21.1046 3 20V4C3 2.89543 3.89543 2 5 2H19C20.1046 2 21 2.89543 21 4Z"
-                            stroke="#475057" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M3 8H11V6" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M21 8H13V6" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
+                    <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M21 4v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2" />
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M3 8h8V6M21 8h-8V6" />
                     </svg>
-
                     <span class="text-primary-gray">الغرف</span>
                 </dt>
                 <dd class="font-semibold text-primary-gray">4</dd>
             </div>
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
-                    <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 10H16" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M7 14H8" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M16 14H17" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M3 18V11.4105C3 11.1397 3.05502 10.8716 3.16171 10.6227L5.4805 5.21216C5.79566 4.47679 6.51874 4 7.31879 4H16.6812C17.4813 4 18.2043 4.47679 18.5195 5.21216L20.8383 10.6227C20.945 10.8716 21 11.1397 21 11.4105V18M3 18V20.4C3 20.7314 3.26863 21 3.6 21H6.4C6.73137 21 7 20.7314 7 20.4V18M3 18H7M21 18V20.4C21 20.7314 20.7314 21 20.4 21H17.6C17.2686 21 17 20.7314 17 20.4V18M21 18H17M7 18H17"
-                            stroke="#475057" stroke-width="1.5" />
+                    <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="M8 10h8M7 14h1M16 14h1" />
+                        <path stroke="currentColor" stroke-width="1.5"
+                            d="M3 18v-6.59a2 2 0 0 1 .162-.787l2.319-5.41A2 2 0 0 1 7.319 4h9.362a2 2 0 0 1 1.838 1.212l2.32 5.41a2 2 0 0 1 .161.789V18M3 18v2.4a.6.6 0 0 0 .6.6h2.8a.6.6 0 0 0 .6-.6V18m-4 0h4m14 0v2.4a.6.6 0 0 1-.6.6h-2.8a.6.6 0 0 1-.6-.6V18m4 0h-4M7 18h10" />
                     </svg>
                     <span class="text-primary-gray">سعة الجراج</span>
                 </dt>
