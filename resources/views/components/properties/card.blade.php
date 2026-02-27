@@ -1,26 +1,27 @@
-<div {{ $attributes->class(['relative w-full rounded-xs transition group bg-white']) }}
+<div {{ $attributes->class(['relative w-full rounded-sm transition group bg-white']) }}
     style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
     <a href="#" class="absolute inset-0 z-20"></a>
     <div class="relative">
-        <div class="absolute inset-0 rounded-t-xs bg-black/30 z-10"></div>
+        <div class="absolute inset-0 rounded-t-sm bg-black/30 z-10"></div>
         <dl class="absolute top-6 start-6 z-20">
             <dt class="hidden invisible">{{ __('content.featured') }}</dt>
             <dd class="flex">
                 <span
-                    class="rounded bg-promoted-badge px-4 py-1.5 font-semibold text-sm text-primary">{{ __('content.featured') }}</span>
+                    class="rounded-sm bg-promoted-badge px-4 py-1.5 font-semibold text-sm text-primary">{{ __('content.featured') }}</span>
             </dd>
         </dl>
         <div class="absolute top-6 end-6 z-20">
             <dl class="flex items-center justify-between">
                 <dt class="invisible">Tags</dt>
                 <dd class="flex items-center space-x-2">
-                    <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.for_sale') }}</span>
                     <span
-                        class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.residance') }}</span>
+                        class="rounded-sm bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.for_sale') }}</span>
+                    <span
+                        class="rounded-sm bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.residance') }}</span>
                 </dd>
             </dl>
         </div>
-        <img class="h-[280px] lg:h-[364px] xl:h-[280px] 2xl:h-[364px] w-full object-cover rounded-t-xs"
+        <img class="h-70 lg:h-91 xl:h-70 2xl:h-91 w-full object-cover rounded-t-sm"
             src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="" />
     </div>

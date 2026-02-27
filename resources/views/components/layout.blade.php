@@ -27,8 +27,8 @@
         {{ $main }}
     </main>
     {{ $slot }}
-    <footer class="mt-32 px-4 lg:px-10 max-w-[1440px] mx-auto bg-primary 2xl:rounded-t"
-        style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
+    <footer class="mt-32 px-4 lg:px-10 max-w-8xl mx-auto bg-primary 2xl:rounded-t"
+        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
         <div class="py-8 grid items-center justify-items-center text-white text-center font-semibold">
             © 2024 شركة محمد الجهاني للعقارات. جميع الحقوق محفوظة.
         </div>

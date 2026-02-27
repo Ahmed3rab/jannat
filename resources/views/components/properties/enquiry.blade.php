@@ -33,13 +33,13 @@
                 <!-- Content -->
                 <div class="mt-6 text-gray-500 max-w-xs mx-auto px-6 space-y-6">
                     <input type="text" name="name"
-                        class="w-full appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded-sm shadow focus:ring-primary"
+                        class="w-full appearance-none bg-[#f1f1f1] placeholder:text-primary-gray border-0 p-4 rounded-sm shadow focus:ring-primary"
                         placeholder="{{ __('content.name') }}" />
                     <input type="text" name="message" value=""
-                        class="w-full appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded-sm shadow focus:ring-primary"
+                        class="w-full appearance-none bg-[#f1f1f1] placeholder:text-primary-gray border-0 p-4 rounded-sm shadow focus:ring-primary"
                         placeholder="{{ __('content.message.phone_number') }}" />
                     <textarea placeholder="{{ __('content.message.body') }}" rows="2" cols=""
-                        class="w-full appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded-sm shadow focus:ring-primary"></textarea>
+                        class="w-full appearance-none bg-[#f1f1f1] placeholder:text-primary-gray border-0 p-4 rounded-sm shadow focus:ring-primary"></textarea>
                 </div>
 
                 <!-- Buttons -->

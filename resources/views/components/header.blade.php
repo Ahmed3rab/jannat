@@ -1,10 +1,9 @@
 <header class="bg-white">
-    <nav class="flex items-center justify-between px-6 lg:px-10 py-6 xl:rounded-b mx-auto w-full lg:max-w-[1440px] bg-primary text-white"
-        style="box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16)">
+    <nav class="flex items-center justify-between px-6 lg:px-10 py-6 xl:rounded-b-sm mx-auto w-full lg:max-w-8xl bg-primary text-white"
+        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
         <a href="{{ route('homepage') }}">
             <x-svgs.logo-white />
         </a>
-
         <div class="lg:hidden inline-flex">
             <div x-data="{
                 open: false,
@@ -43,29 +42,29 @@
                 <!-- Panel -->
                 <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')" x-cloak
-                    class="absolute left-0 min-w-48 rounded-lg shadow-sm mt-10 z-50 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
+                    class="absolute left-0 min-w-48 rounded-sm shadow-sm mt-10 z-50 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
                     <a href="#new"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">الرئيسية</a>
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">الرئيسية</a>
 
                     <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">سكني</a>
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">سكني</a>
 
                     <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تجاري</a>
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تجاري</a>
 
                     <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">شقق</a>
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">شقق</a>
 
                     <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تواصل
+                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تواصل
                         معنا</a>
                     <div class="mt-4 border-t border-gray-200">
 
                         <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
+                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
 
                         <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
+                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
                     </div>
                 </div>
             </div>
@@ -139,12 +138,12 @@
                     <!-- Panel -->
                     <div x-ref="panel" x-show="open" x-transition.origin.start.left
                         x-on:click.outside="close($refs.button)" :id="$id('dropdown-button')" x-cloak
-                        class="absolute end-0 min-w-36 rounded-lg shadow-sm mt-10 z-10 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
+                        class="absolute end-0 min-w-36 rounded-sm shadow-sm mt-10 z-10 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
                         <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
+                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
 
                         <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-md transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
+                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
                     </div>
                 </div>
             </li>

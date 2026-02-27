@@ -32,7 +32,7 @@
                         <div data-glide-el="controls" class="hidden lg:block ltr:order-last">
                             <button data-glide-dir=">" type="button"
                                 style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
-                                class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
+                                class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded-sm text-primary">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.23853 4.5L15.7281 12L8.23853 19.5" stroke="#004274" stroke-width="1.5"
@@ -52,7 +52,7 @@
                         <div data-glide-el="controls" class="hidden lg:block ltr:order-first">
                             <button data-glide-dir="<" type="button"
                                 style="box-shadow: 0px 1px 1px 1px rgba(0, 66, 116, 0.19)"
-                                class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded text-primary">
+                                class="cursor-pointer flex items-center justify-center h-12 w-12 bg-white rounded-sm text-primary">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path d="M15.7284 19.5L8.23877 12L15.7284 4.5" stroke="#004274" stroke-width="1.5"
@@ -79,8 +79,8 @@
                 <div class="absolute inset-0 overflow-hidden">
                     <x-svgs.latest />
                 </div>
-                <div class="relative z-20 -mt-16 mx-auto w-full max-w-7xl lg:max-w-3xl xl:max-w-6xl 3xl:max-w-7xl bg-white px-8 pb-6 lg:pb-10 pt-12 rounded-lg shadow-lg"
-                    style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);">
+                <div class="relative z-20 -mt-16 mx-auto w-full max-w-7xl lg:max-w-3xl xl:max-w-6xl 3xl:max-w-7xl bg-white px-8 pb-6 lg:pb-10 pt-12 rounded-sm"
+                    style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                     <form class="flex flex-col xl:flex-row items-center gap-6 sm:gap-8 xl:gap-12">
                         <div
                             class="flex-1 grid grid-cols-2 sm:grid-cols-6 gap-6 w-full xl:flex xl:items-center xl:gap-x-6">
@@ -231,13 +231,13 @@
             </div>
         </section>
         <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-6xl 2xl:max-w-8xl mx-auto">
-            <div class="px-4 lg:px-0 relative xl:rounded shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
+            <div class="px-4 lg:px-0 relative xl:rounded-sm shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
                 style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
                 <div class="absolute inset-0 overflow-hidden">
                     <x-svgs.contact />
                 </div>
                 <div class="absolute start-1/2 translate-x-1/2 w-max md:start-14 -top-10 md:-top-16 md:translate-0">
-                    <div class="bg-white p-10 font-bold text-4xl rounded text-primary"
+                    <div class="bg-white p-10 font-bold text-4xl rounded-sm text-primary"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">{{ __('content.be_in_touch') }}</div>
                 </div>
                 <div

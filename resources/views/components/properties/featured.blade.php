@@ -1,14 +1,15 @@
 <div {{ $attributes->class(['flex items-center justify-center']) }}>
-    <div class="rounded h-[522px] max-w-[696px] lg:h-[400px] lg:max-w-[500px] 2xl:h-[522px] 2xl:max-w-[696px] lg:aspect-video relative"
+    <div class="rounded-sm h-130.5 max-w-174 lg:h-100 lg:max-w-125 2xl:h-130.5 2xl:max-w-174 lg:aspect-video relative"
         style="box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)">
-        <div class="rounded absolute inset-0 bg-black/20"></div>
-        <img class="rounded h-full w-full object-cover"
+        <div class="rounded-sm absolute inset-0 bg-black/20"></div>
+        <img class="rounded-sm h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
     </div>
     <div class="z-20 flex-1 lg:max-w-md -ms-14 ltr:-me-14">
-        <div class="relative text-gray-800 px-8 py-9 bg-white rounded-se-md rounded-b-md"
+        <div class="relative text-gray-800 px-8 py-9 bg-white rounded-se-sm rounded-b-sm"
             style="box-shadow: 0px 3px 14px 2px rgba(0, 66, 116, 0.28);">
-            <div class="absolute bottom-full start-0 bg-promoted-badge text-primary font-semibold px-6 py-2 rounded-t">
+            <div
+                class="absolute bottom-full start-0 bg-promoted-badge text-primary font-semibold px-6 py-2 rounded-t-sm">
                 <span>{{ __('content.featured') }}</span>
             </div>
             <dl class="flex items-center justify-between">
@@ -16,9 +17,10 @@
                 <dt class="text-2xl font-semibold text-gray-800">فيلا بطابقين وملحق
                 </dt>
                 <dd class="flex items-center space-x-2">
-                    <span class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.for_sale') }}</span>
                     <span
-                        class="rounded bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.residance') }}</span>
+                        class="rounded-sm bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.for_sale') }}</span>
+                    <span
+                        class="rounded-sm bg-badge px-4 py-1.5 font-semibold text-sm">{{ __('content.residance') }}</span>
                 </dd>
             </dl>
 

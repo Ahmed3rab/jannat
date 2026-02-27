@@ -105,7 +105,7 @@
                         </button>
                         <div class="-mr-px grid grow grid-cols-1 focus-within:relative">
                             <input id="query" type="text" name="query"
-                                class="col-start-1 row-start-1 block w-full w-full appearance-none bg-[#f1f1f1] placeholder:text-[#475057] border-0 p-4 rounded-e-sm shadow focus:ring-primary text-sm"
+                                class="col-start-1 row-start-1 block w-full appearance-none bg-[#f1f1f1] placeholder:text-primary-gray border-0 p-4 rounded-e-sm shadow focus:ring-primary text-sm"
                                 value="{{ url()->full() }}" />
                         </div>
                     </div>

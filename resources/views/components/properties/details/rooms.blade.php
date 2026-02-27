@@ -3,12 +3,11 @@
 </div>
 <dd class="mt-8 lg:px-5">
     <dl class="grid gap-10">
-        <div class="grid gap-6 lg:gap-10">
-            <dt class="font-semibold text-primary-gray">
+        <div class="grid gap-6 lg:gap-10 grid-cols-1 lg:grid-cols-12 justify-items-start lg:items-center">
+            <dt class="lg:col-span-2 font-semibold text-primary-gray text-nowrap">
                 الطابق الأرضي</dt>
-            <dd>
-                <dl
-                    class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 sm:gap-8 lg:gap-16 xl:gap-6 2xl:gap-10 justify-items-center">
+            <dd class="lg:col-span-10">
+                <dl class="grid grid-cols-3 gap-6 lg:flex lg:items-center lg:justify-center lg:gap-16">
                     <div class="grid justify-items-center gap-3">
                         <dt class="flex items-center space-x-2">
                             <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
