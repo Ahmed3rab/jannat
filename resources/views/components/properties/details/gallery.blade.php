@@ -20,7 +20,7 @@
 
         <div x-show="open" x-transition.opacity x-on:click="closeModal()"
             class="relative flex min-h-screen items-center justify-center p-4">
-            <div x-on:click.stop x-trap.noscroll.inert="open" class="w-full max-w-8xl">
+            <div x-on:click.stop x-trap.noscroll.inert="open" class="w-full h-full md:h-auto md:max-w-6xl">
                 <div x-ref="glideRoot" class="glide">
                     <div class="lg:flex lg:items-center lg:justify-between gap-24">
                         <div data-glide-el="controls" class="hidden lg:block ltr:order-last">
@@ -41,7 +41,7 @@
                                     <li class="glide__slide">
                                         <div class="relative">
                                             <div class="absolute inset-0 rounded-sm bg-black/20 z-10"></div>
-                                            <img class="h-135 w-full object-cover rounded-sm"
+                                            <img class="w-full max-h-[85vh] object-contain"
                                                 src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                                 alt="" />
                                         </div>
