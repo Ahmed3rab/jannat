@@ -2,7 +2,7 @@
     <div class="py-6 border-b border-[#9BA2A8]">
         <dt class="text-primary font-semibold text-2xl">وصف العقار</dt>
     </div>
-    <dd class="mt-8 px-5 text-primary-gray text-xl/12">
+    <dd class="mt-8 lg:px-5 text-primary-gray text-xl/12">
         هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن
         التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم
         استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن

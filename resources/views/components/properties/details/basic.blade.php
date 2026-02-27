@@ -2,8 +2,8 @@
     <div class="py-6 border-b border-[#9BA2A8]">
         <dt class="text-primary font-semibold text-2xl">تفاصيل</dt>
     </div>
-    <dd class="mt-8 px-5">
-        <dl class="flex items-center justify-center gap-10">
+    <dd class="mt-8 lg:px-5">
+        <dl class="grid grid-cols-3 xl:grid-cols-5 justify-items-start 2xl:justify-items-center gap-6 2xl:gap-10">
             <div class="grid justify-items-center gap-3">
                 <dt class="flex items-center space-x-2">
                     <svg class="size-6" width="24" height="24" viewBox="0 0 24 24" fill="none"

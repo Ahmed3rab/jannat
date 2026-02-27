@@ -3,8 +3,9 @@
         <x-header-alt title="" />
     </x-slot:header>
     <x-slot:main>
-        <section id="gallery" class="relative w-full mx-auto max-w-7xl grid grid-cols-4 grid-rows-2 gap-5">
-            <div class="z-30 absolute inset-0 flex items-end justify-start ps-8 pb-8">
+        <section id="gallery"
+            class="relative w-full mx-auto max-w-7xl grid lg:grid-cols-4 grid-rows-2 gap-5 px-6 lg:px-10 2xl:px-0">
+            <div class="z-30 absolute inset-0 flex items-end justify-start ps-16 pb-10 2xl:ps-8 2xl:pb-8">
                 <x-properties.details.gallery />
             </div>
 
@@ -12,60 +13,65 @@
                 <a href="#" class="absolute inset-0 z-20 rounded-sm"></a>
                 <div class="relative">
                     <div class="absolute inset-0 rounded-sm bg-black/30 z-10"></div>
-                    <img class="h-[500px] w-full object-cover rounded-sm"
+                    <img class="h-96 lg:h-109 xl:h-125 w-full object-cover rounded-sm"
                         src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="" />
                 </div>
             </div>
-            <div class="col-span-1 row-span-1 rounded-sm" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+            <div class="hidden lg:block col-span-1 row-span-1 rounded-sm"
+                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
                 <a href="#" class="absolute inset-0 z-20 rounded-sm"></a>
                 <div class="relative">
                     <div class="absolute inset-0 rounded-sm bg-black/30 z-10"></div>
-                    <img class="h-[240px] w-full object-cover rounded-sm"
+                    <img class="h-60 lg:h-52 xl:h-60 w-full object-cover rounded-sm"
                         src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="" />
                 </div>
             </div>
-            <div class="col-span-1 row-span-1 rounded-sm" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+            <div class="hidden lg:block col-span-1 row-span-1 rounded-sm"
+                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
                 <a href="#" class="absolute inset-0 z-20 rounded-sm"></a>
                 <div class="relative">
                     <div class="absolute inset-0 rounded-sm bg-black/30 z-10"></div>
-                    <img class="h-[240px] w-full object-cover rounded-sm"
+                    <img class="h-60 lg:h-52 xl:h-60 w-full object-cover rounded-sm"
                         src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="" />
                 </div>
             </div>
-            <div class="col-span-1 row-span-1 rounded-sm" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+            <div class="hidden lg:block col-span-1 row-span-1 rounded-sm"
+                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
                 <a href="#" class="absolute inset-0 z-20 rounded-sm"></a>
                 <div class="relative">
                     <div class="absolute inset-0 rounded-sm bg-black/30 z-10"></div>
-                    <img class="h-[240px] w-full object-cover rounded-sm"
+                    <img class="h-60 lg:h-52 xl:h-60 w-full object-cover rounded-sm"
                         src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="" />
                 </div>
             </div>
-            <div class="col-span-1 row-span-1 rounded-sm" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+            <div class="hidden lg:block col-span-1 row-span-1 rounded-sm"
+                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
                 <a href="#" class="absolute inset-0 z-20 rounded-sm"></a>
                 <div class="relative">
                     <div class="absolute inset-0 rounded-sm bg-black/30 z-10"></div>
-                    <img class="h-[240px] w-full object-cover rounded-sm"
+                    <img class="h-60 lg:h-52 xl:h-60 w-full object-cover rounded-sm"
                         src="https://plus.unsplash.com/premium_photo-1661964014750-963a28aeddea?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="" />
                 </div>
             </div>
         </section>
-        <section id="details" class="mt-20 w-full mx-auto max-w-7xl">
+        <section id="details" class="mt-20 w-full mx-auto max-w-7xl px-6 lg:px-10 2xl:px-0">
             <article>
-                <section class="pb-6 border-b border-[#9BA2A8] flex items-start justify-between">
+                <section class="pb-6 border-b border-[#9BA2A8] flex flex-col lg:flex-row items-start justify-between">
                     <div>
                         <h2 class="text-3xl font-bold text-primary">فيلا أرضية دورين وملحق</h2>
                         <p class="mt-4 text-lg text-primary-gray">بالقرب من مسجد الحسن والحسين، بوابة الجبس، طرابلس.
                         </p>
                     </div>
-                    <p class="text-3xl font-bold text-primary">200.000 د.ل</p>
+                    <p class="mt-6 lg:mt-0 text-3xl font-bold text-primary">200.000 د.ل</p>
                 </section>
-                <section class="mt-8 grid grid-cols-12 gap-10 items-start">
-                    <div class="col-span-9 space-y-16">
+                <section
+                    class="mt-8 xl:grid xl:grid-cols-12 space-y-10 lg:space-y-16 xl:space-y-0 xl:gap-8 2xl:gap-10 xl:items-start">
+                    <div class="xl:col-span-8 space-y-16">
                         <x-properties.details.basic />
                         <x-properties.details.description />
                         <div x-data="{
@@ -110,7 +116,7 @@
                                         :aria-selected="isSelected($el.id)"
                                         :class="isSelected($el.id) ? 'text-primary border-primary-gray/20' :
                                             'text-primary-gray border-transparent'"
-                                        class="cursor-pointer font-semibold hover:text-primary inline-flex rounded-t-sm border-t border-r border-l px-5 py-2.5"
+                                        class="text-nowrap cursor-pointer font-semibold hover:text-primary inline-flex rounded-t-sm border-t border-r border-l px-5 py-2.5"
                                         role="tab">الوحدات الخدمية</button>
                                 </li>
                                 <li>
@@ -158,7 +164,7 @@
                             </div>
                         </div>
                     </div>
-                    <aside class="col-span-3 grid gap-8">
+                    <aside class="sm:max-w-lg sm:mx-auto xl:mx-auto xl:w-full xl:col-span-4 grid gap-8">
                         <x-properties.details.aside />
                         <div class="grid gap-6">
                             <x-properties.share />
