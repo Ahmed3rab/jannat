@@ -3,7 +3,7 @@
         @include('components.header')
     </x-slot:header>
     <x-slot:main>
-        <section id="slider" class="px-6 lg:px-10 2xl:px-0 mx-auto w-full max-w-[1440px]">
+        <section id="slider" class="px-6 lg:px-10 2xl:px-0 mx-auto w-full max-w-8xl">
             <div class="lg:hidden">
                 <div x-data="glide({ perView: 1, type: 'carousel', gap: 24, breakpoints: { 1024: { perView: 2 }, 768: { perView: 1 } } })" class="glide">
                     <div class="glide__track overflow-visible" data-glide-el="track">
@@ -85,33 +85,33 @@
                         <div
                             class="flex-1 grid grid-cols-2 sm:grid-cols-6 gap-6 w-full xl:flex xl:items-center xl:gap-x-6">
                             <select
-                                class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                                class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.city') }}</option>
                             </select>
                             <select
-                                class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                                class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.town') }}</option>
                             </select>
                             <select
-                                class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                                class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.property_type') }}</option>
                             </select>
                             <input type="text" name="min"
-                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] rounded focus:ring-primary focus:outline-0"
+                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray rounded-sm focus:ring-primary focus:outline-0"
                                 placeholder="{{ __('content.price.min') }}">
                             <input type="text" name="min"
-                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] rounded focus:ring-primary focus:outline-0"
+                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray rounded-sm focus:ring-primary focus:outline-0"
                                 placeholder="{{ __('content.price.max') }}">
                         </div>
                         <button type="submit"
-                            class="w-full xl:w-auto 3xl:w-full appearance-none rounded-md bg-primary text-white font-bold py-2.5 px-8 uppercase text-sm">
+                            class="w-full xl:w-auto 3xl:w-full appearance-none rounded-sm bg-primary text-white font-bold py-2.5 px-8 uppercase text-sm">
                             <span>{{ __('content.filter') }}</span>
                         </button>
                     </form>
                 </div>
 
                 <div {{-- xl:mx-40 --}}
-                    class="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-12 md:gap-6 lg:gap-12 xl:gap-6 3xl:gap-12 mt-16 -mb-20 2xl:max-w-[1440px] mx-auto">
+                    class="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-12 md:gap-6 lg:gap-12 xl:gap-6 3xl:gap-12 mt-16 -mb-20 2xl:max-w-8xl mx-auto">
                     @for ($i = 0; $i < 4; $i++)
                         <x-properties.card />
                     @endfor
@@ -141,72 +141,72 @@
                         <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">
                             {{ __('content.discover.by_city.subtitle') }}</p>
                     </div>
-                    <div class="lg:row-span-2 relative rounded-md h-[240px] lg:h-[512px] xl:h-[624px] w-full"
+                    <div class="lg:row-span-2 relative rounded-sm h-60 lg:h-128 xl:h-156 w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="sm:col-span-2 lg:col-span-1 relative rounded-md h-[240px] xl:h-[296px] w-full"
+                    <div class="sm:col-span-2 lg:col-span-1 relative rounded-sm h-60 xl:h-74 w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
 
-                    <div class="relative rounded-md h-[240px] xl:h-[296px] w-full"
+                    <div class="relative rounded-sm h-60 xl:h-74 w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="relative rounded-md h-[240px] xl:h-[296px] w-full"
+                    <div class="relative rounded-sm h-60 xl:h-74 w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
                 </div>
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
-                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px]"
+                    <div class="relative rounded-sm h-60 w-full xl:h-74"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="sm:order-first relative rounded-md h-[240px] w-full xl:h-[296px]"
+                    <div class="sm:order-first relative rounded-sm h-60 w-full xl:h-74"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
                     <div
-                        class="order-first lg:order-none lg:row-span-2 text-primary self-center grid justify-items-center">
+                        class="order-first lg:order-0 lg:row-span-2 text-primary self-center grid justify-items-center">
                         <h3 class="text-5xl sm:text-4xl text-center font-bold">
                             {{ __('content.discover.by_type.title') }}</h3>
                         <svg class="my-8" width="203" height="1" viewBox="0 0 203 1" fill="none"
@@ -216,13 +216,13 @@
                         <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">
                             {{ __('content.discover.by_type.subtitle') }}</p>
                     </div>
-                    <div class="lg:col-span-2 rounded-md relative h-[240px] xl:h-[296px] w-full"
+                    <div class="lg:col-span-2 rounded-sm relative h-60 xl:h-74 w-full"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div class="rounded-md absolute inset-0 bg-black/40"></div>
+                        <div class="rounded-sm absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
                             <span class="text-white text-4xl font-semibold">طرابلس</span>
                         </div>
-                        <img class="rounded-md object-cover h-full w-full"
+                        <img class="rounded-sm object-cover h-full w-full"
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
@@ -230,7 +230,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-6xl 2xl:max-w-[1440px] mx-auto">
+        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-6xl 2xl:max-w-8xl mx-auto">
             <div class="px-4 lg:px-0 relative xl:rounded shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
                 style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
                 <div class="absolute inset-0 overflow-hidden">
