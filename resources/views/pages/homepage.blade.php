@@ -185,7 +185,7 @@
                 </div>
                 <div
                     class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
-                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px] 2xl:w-[400px]"
+                    <div class="relative rounded-md h-[240px] w-full xl:h-[296px]"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
@@ -195,7 +195,7 @@
                             src="https://plus.unsplash.com/premium_photo-1680836316227-ef17dbbcfb27?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="">
                     </div>
-                    <div class="sm:order-first relative rounded-md h-[240px] w-full xl:h-[296px] 2xl:w-[400px]"
+                    <div class="sm:order-first relative rounded-md h-[240px] w-full xl:h-[296px]"
                         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div class="rounded-md absolute inset-0 bg-black/40"></div>
                         <div class="absolute inset-0 z-20 flex items-center justify-center">
