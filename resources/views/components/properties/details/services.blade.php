@@ -11,18 +11,10 @@
                     class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 sm:gap-8 lg:gap-16 xl:gap-6 2xl:gap-10 justify-items-center">
                     <div class="grid justify-items-center gap-3">
                         <dt class="flex items-center space-x-2">
-                            <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 20H9M9 20H12M9 20V15" stroke="#475057" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M17 20V12C17 12 19.5 11 19.5 9C19.5 7.24264 19.5 4.5 19.5 4.5" stroke="#475057"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M17 8.5V4.5" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M4.49981 11C5.49973 13.1281 8.99981 15 8.99981 15C8.99981 15 12.4999 13.1281 13.4998 11C14.5793 8.70257 13.4998 4.5 13.4998 4.5H4.49981C4.49981 4.5 3.42029 8.70257 4.49981 11Z"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                            <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                class="size-6 text-primary-gray" viewBox="0 0 24 24">
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M6 20h3m0 0h3m-3 0v-5M17 20v-8s2.5-1 2.5-3V4.5M17 8.5v-4M4.5 11c1 2.128 4.5 4 4.5 4s3.5-1.872 4.5-4c1.08-2.297 0-6.5 0-6.5h-9s-1.08 4.203 0 6.5" />
                             </svg>
                             <span class="text-primary-gray">المطابخ</span>
                         </dt>
@@ -30,23 +22,12 @@
                     </div>
                     <div class="grid justify-items-center gap-3">
                         <dt class="flex items-center space-x-2">
-
-                            <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M21 13V16C21 18.2091 19.2091 20 17 20H7C4.79086 20 3 18.2091 3 16V13.6C3 13.2686 3.26863 13 3.6 13H21Z"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M16 20L17 22" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M8 20L7 22" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M21 13V7C21 4.79086 19.2091 3 17 3H12" stroke="#475057" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M15.3998 8H8.59979C8.26841 8 8.00369 7.7317 8.03995 7.4023C8.186 6.07539 8.86288 3 11.9998 3C15.1367 3 15.8136 6.07539 15.9596 7.4023C15.9959 7.73169 15.7312 8 15.3998 8Z"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                            <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                class="size-6 text-primary-gray" viewBox="0 0 24 24">
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M21 13v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-2.4a.6.6 0 0 1 .6-.6zM16 20l1 2M8 20l-1 2M21 13V7a4 4 0 0 0-4-4h-5" />
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15.4 8H8.6c-.332 0-.596-.268-.56-.598C8.186 6.075 8.863 3 12 3s3.814 3.075 3.96 4.402c.036.33-.229.598-.56.598" />
                             </svg>
                             <span class="text-primary-gray">الحمامات</span>
                         </dt>
@@ -54,16 +35,10 @@
                     </div>
                     <div class="grid justify-items-center gap-3">
                         <dt class="flex items-center space-x-2">
-                            <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 7V17" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M1 7H23" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M4 10H20" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M20 7V17" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                            <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                class="size-6 text-primary-gray" viewBox="0 0 24 24">
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 7v10M1 7h22M4 10h16M20 7v10" />
                             </svg>
                             <span class="text-primary-gray">المكاتب</span>
                         </dt>
@@ -71,20 +46,12 @@
                     </div>
                     <div class="grid justify-items-center gap-3">
                         <dt class="flex items-center space-x-2">
-
-                            <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 18V21" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M5 10V5C5 3.89543 5.89543 3 7 3H17C18.1046 3 19 3.89543 19 5V10"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path
-                                    d="M19.5 10C18.1193 10 17 11.1193 17 12.5V14H7V12.5C7 11.1193 5.88071 10 4.5 10C3.11929 10 2 11.1193 2 12.5C2 13.7095 2.85888 14.7184 4 14.95V18H20V14.95C21.1411 14.7184 22 13.7095 22 12.5C22 11.1193 20.8807 10 19.5 10Z"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M20 18V21" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                            <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                class="size-6 text-primary-gray" viewBox="0 0 24 24">
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M4 18v3M5 10V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5" />
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M19.5 10a2.5 2.5 0 0 0-2.5 2.5V14H7v-1.5a2.5 2.5 0 1 0-3 2.45V18h16v-3.05a2.5 2.5 0 0 0-.5-4.95M20 18v3" />
                             </svg>
                             <span class="text-primary-gray">الفرش</span>
                         </dt>
@@ -92,26 +59,10 @@
                     </div>
                     <div class="grid justify-items-center gap-3">
                         <dt class="flex items-center space-x-2">
-
-                            <svg class="size-6 text-primary-gray" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M22 3.6V11H2V3.6C2 3.26863 2.26863 3 2.6 3H21.4C21.7314 3 22 3.26863 22 3.6Z"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M18 7H19" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M2 11L2.78969 13.5844C3.04668 14.4255 3.82294 15 4.70239 15H6"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M22 11L21.2103 13.5844C20.9533 14.4255 20.1771 15 19.2976 15H18"
-                                    stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M9.5 14.5C9.5 14.5 9.5 21.5 6 21.5" stroke="#475057" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M14.5 14.5C14.5 14.5 14.5 21.5 18 21.5" stroke="#475057" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12 14.5V21.5" stroke="#475057" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
+                            <svg class="size-6 text-primary-gray" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                class="size-6 text-primary-gray" viewBox="0 0 24 24">
+                                <path stroke="#475057" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M22 3.6V11H2V3.6a.6.6 0 0 1 .6-.6h18.8a.6.6 0 0 1 .6.6M18 7h1M2 11l.79 2.584A2 2 0 0 0 4.702 15H6M22 11l-.79 2.584A2 2 0 0 1 19.298 15H18M9.5 14.5s0 7-3.5 7M14.5 14.5s0 7 3.5 7M12 14.5v7" />
                             </svg>
                             <span class="text-primary-gray">جهاز تكييف</span>
                         </dt>
