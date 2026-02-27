@@ -5,26 +5,26 @@
     <x-slot:main>
         <section>
             <div class="relative z-20 mx-auto w-full max-w-7xl lg:max-w-3xl xl:max-w-6xl 3xl:max-w-7xl bg-white px-8 pb-6 lg:pb-10 pt-12 rounded-sm shadow-lg"
-                style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);">
+                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
                 <form class="flex flex-col xl:flex-row items-center gap-6 sm:gap-8 xl:gap-12">
                     <div class="flex-1 grid grid-cols-2 sm:grid-cols-6 gap-6 w-full xl:flex xl:items-center xl:gap-x-6">
                         <select
-                            class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                            class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
                             <option value="test">{{ __('content.select.city') }}</option>
                         </select>
                         <select
-                            class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                            class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
                             <option value="test">{{ __('content.select.town') }}</option>
                         </select>
                         <select
-                            class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-[left_0.5rem_center] ltr:bg-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-semibold rounded focus:ring-primary focus:outline-0">
+                            class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
                             <option value="test">{{ __('content.select.property_type') }}</option>
                         </select>
                         <input type="text" name="min"
-                            class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] rounded focus:ring-primary focus:outline-0"
+                            class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray rounded-sm focus:ring-primary focus:outline-0"
                             placeholder="{{ __('content.price.min') }}">
                         <input type="text" name="min"
-                            class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-[#475057] font-smeibold placeholder:font-semibold placeholder-[#475057] rounded focus:ring-primary focus:outline-0"
+                            class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray rounded-sm focus:ring-primary focus:outline-0"
                             placeholder="{{ __('content.price.max') }}">
                     </div>
                     <button type="submit"
@@ -63,7 +63,7 @@
                                     <h5 class="-mx-2 -my-3 flow-root">
                                         <button type="button" command="--toggle"
                                             commandfor="filter-section-mobile-rooms"
-                                            class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-[#475057]">
+                                            class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-primary-gray">
                                             <span class="font-medium text-primary-gray">الحجرات</span>
                                             <span class="ms-6 flex items-center">
                                                 <svg class="size-6 in-aria-expanded:hidden" data-slot="icon"
@@ -125,8 +125,8 @@
                 </dialog>
             </el-dialog>
             <div class="flex flex-col xl:flex-row xl:items-start gap-12 xl:gap-20 px-6 lg:px-10 2xl:px-0">
-                <aside class="min-w-[300px] flex-1 xl:pt-3">
-                    <div class="flex  justify-between pb-6 border-b border-[#AEBBC5]">
+                <aside class="min-w-75 flex-1 xl:pt-3">
+                    <div class="flex justify-between pb-6 border-b border-[#AEBBC5]">
                         <h4 class="text-2xl font-bold text-primary">بحث متقدم</h4>
                         <button type="button" command="show-modal" commandfor="mobile-filters"
                             class="cursor-pointer flex items-center gap-2.5 py-1.5 px-2 bg-white  rounded-sm text-primary-gray hover:text-gray-500 xl:hidden">
@@ -144,7 +144,7 @@
                         <div class="py-6 px-3">
                             <h5 class="-mx-2 -my-3 flow-root">
                                 <button type="button" command="--toggle" commandfor="filter-section-mobile-rooms"
-                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-[#475057]">
+                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-primary-gray">
                                     <span class="font-medium text-primary-gray">الحجرات</span>
                                     <span class="ms-6 flex items-center">
                                         <svg class="size-6 in-aria-expanded:hidden" data-slot="icon"
@@ -202,7 +202,7 @@
                         <div class="border-t border-[#AEBBC5] py-6 px-3">
                             <h5 class="-mx-2 -my-3 flow-root">
                                 <button type="button" command="--toggle" commandfor="filter-section-mobile-color"
-                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-[#475057]">
+                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-primary-gray">
                                     <span class="font-medium text-primary-gray">الفرش</span>
                                     <span class="ms-6 flex items-center">
                                         <svg class="size-6 in-aria-expanded:hidden" data-slot="icon"
@@ -254,7 +254,7 @@
                         <div class="border-t border-[#AEBBC5] py-6 px-3">
                             <h5 class="-mx-2 -my-3 flow-root">
                                 <button type="button" command="--toggle" commandfor="filter-section-mobile-color"
-                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-[#475057]">
+                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-primary-gray">
                                     <span class="font-medium text-primary-gray">الوحدات الخدمية</span>
                                     <span class="ms-6 flex items-center">
                                         <svg class="size-6 in-aria-expanded:hidden" data-slot="icon"
@@ -306,7 +306,7 @@
                         <div class="border-t border-[#AEBBC5] py-6 px-3">
                             <h5 class="-mx-2 -my-3 flow-root">
                                 <button type="button" command="--toggle" commandfor="filter-section-mobile-color"
-                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-[#475057]">
+                                    class="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-primary-gray">
                                     <span class="font-medium text-primary-gray">المرافق الإضافية</span>
                                     <span class="ms-6 flex items-center">
                                         <svg class="size-6 in-aria-expanded:hidden" data-slot="icon"
