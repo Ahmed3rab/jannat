@@ -1,4 +1,4 @@
-<x-layout-alt>
+<x-layout>
     <x-slot:header>
         <x-header-alt title="قائمة العقارات" />
     </x-slot:header>
@@ -368,4 +368,4 @@
             </div>
         </section>
     </x-slot:main>
-</x-layout-alt>
+</x-layout>

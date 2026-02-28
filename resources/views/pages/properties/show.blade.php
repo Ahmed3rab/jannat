@@ -1,4 +1,4 @@
-<x-layout-alt>
+<x-layout>
     <x-slot:header>
         <x-header-alt title="" />
     </x-slot:header>
@@ -175,4 +175,4 @@
             </article>
         </section>
     </x-slot:main>
-</x-layout-alt>
+</x-layout>
