@@ -1,6 +1,9 @@
 @php
     use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
-    $isActive = request()->routeIs($route);
+    use Illuminate\Support\Str;
+    $currentRoute = request()->route()?->getName();
+    $routeGroup = Str::contains($route, '.') ? Str::before($route, '.') : $route;
+    $isActive = Str::startsWith($currentRoute, $routeGroup);
 @endphp
 @props([
     'route',
