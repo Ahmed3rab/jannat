@@ -138,15 +138,19 @@
                     </button>
 
                     <!-- Panel -->
-                    <div x-ref="panel" x-show="open" x-transition.origin.start.left
+                    <ul x-ref="panel" x-show="open" x-transition.origin.start.left
                         x-on:click.outside="close($refs.button)" :id="$id('dropdown-button')" x-cloak
                         class="absolute end-0 min-w-36 rounded-sm shadow-sm mt-10 z-10 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
-                        <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
-
-                        <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
-                    </div>
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                    class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
             </li>
         </ul>
