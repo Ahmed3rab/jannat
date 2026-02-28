@@ -236,7 +236,8 @@
                 <div class="absolute inset-0 overflow-hidden">
                     <x-svgs.contact />
                 </div>
-                <div class="absolute start-1/2 translate-x-1/2 w-max md:start-14 -top-10 md:-top-16 md:translate-0">
+                <div
+                    class="absolute start-1/2 ltr:-translate-x-1/2 translate-x-1/2 w-max rtl:md:translate-x-0 rtl:md:start-14 ltr:md:translate-x-0 ltr:md:start-14 -top-10 md:-top-16">
                     <div class="bg-white p-10 font-bold text-4xl rounded-sm text-primary"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">{{ __('content.be_in_touch') }}</div>
                 </div>
