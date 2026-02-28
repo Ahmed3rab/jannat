@@ -1,7 +1,10 @@
+@php
+    use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+@endphp
 <header class="bg-white">
     <nav class="flex items-center justify-between px-6 lg:px-10 py-6 xl:rounded-b-sm mx-auto w-full lg:max-w-8xl bg-primary text-white"
         style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-        <a href="{{ route('homepage') }}">
+        <a href="{{ LaravelLocalization::localizeUrl(route('home', [], false)) }}">
             <x-svgs.logo-white />
         </a>
         <div class="lg:hidden inline-flex">
@@ -40,67 +43,32 @@
                 </button>
 
                 <!-- Panel -->
-                <div x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
+                <ul x-ref="panel" x-show="open" x-transition.origin.top.left x-on:click.outside="close($refs.button)"
                     :id="$id('dropdown-button')" x-cloak
-                    class="absolute left-0 min-w-48 rounded-sm shadow-sm mt-10 z-50 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
-                    <a href="#new"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">الرئيسية</a>
+                    class="absolute end-0 min-w-48 rounded-sm shadow-sm mt-10 z-50 origin-top-left bg-white p-1.5 outline-none border border-gray-200">
 
-                    <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">سكني</a>
-
-                    <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تجاري</a>
-
-                    <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">شقق</a>
-
-                    <a href="#edit"
-                        class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:bg-gray-50 focus-visible:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">تواصل
-                        معنا</a>
-                    <div class="mt-4 border-t border-gray-200">
-
-                        <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">العربية</a>
-
-                        <a href="#"
-                            class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">English</a>
-                    </div>
-                </div>
+                    <li class="group"><x-nav-link.mobile.primary route="home" label="nav.home" /></li>
+                    <li class="group"><x-nav-link.mobile.primary route="properties.index"
+                            label="nav.properties.index" /></li>
+                    <li class="group"><x-nav-link.mobile.primary route="contact" label="nav.contact" /></li>
+                    <ul class="mt-4 border-t border-gray-200">
+                        @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+                                    class="px-2 lg:py-1.5 py-2 w-full flex items-center rounded-sm transition-colors text-left text-gray-800 hover:text-primary focus-visible:text-primary disabled:opacity-50 disabled:cursor-not-allowed">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </ul>
             </div>
         </div>
         <ul class="hidden lg:flex items-center space-x-6 font-bold">
-            <li class="group">
-                <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
-                    <span class="relative">الرئيسية</span>
-                </span>
-            </li>
-
-            <li class="group">
-                <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
-                    <span class="relative">سكني</span>
-                </span>
-            </li>
-            <li class="group">
-                <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
-                    <span class="relative">تجاري</span>
-                </span>
-            </li>
-            <li class="group">
-                <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
-                    <span class="relative">شقق</span>
-                </span>
-            </li>
-            <li class="group">
-                <span
-                    class="relative inline-block after:absolute after:-bottom-2 after:rounded-full after:left-1/2 after:-translate-x-1/2 after:w-8 after:scale-x-0 group-hover:after:scale-x-100 after:transform after:transition after:h-[0.5px] after:bg-white after:content-['']">
-                    <span class="relative">تواصل معنا</span>
-                </span>
-            </li>
+            <li class="group"><x-nav-link.desktop.primary route="home" label="nav.home" /></li>
+            <li class="group"><x-nav-link.desktop.primary route="properties.index" label="nav.properties.index" /></li>
+            <li class="group"><x-nav-link.desktop.primary route="contact" label="nav.contact" /></li>
             <li class="group">
                 <div x-data="{
                     open: false,
