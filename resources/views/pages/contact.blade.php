@@ -9,9 +9,9 @@
                 <div class="absolute inset-0 overflow-hidden">
                     <x-svgs.contact />
                 </div>
-
-                <div class="z-20 absolute start-1/2 translate-x-1/2 w-max md:start-14 -top-24 md:-top-16 md:translate-0">
-                    <div class="bg-white py-8 pr-8 pl-2 rounded-sm text-primary"
+                <div
+                    class="z-20 absolute start-1/2 ltr:-translate-x-1/2 ltr:md:translate-x-0 translate-x-1/2 md:translate-x-0 w-max md:start-14 ltr:md:start-14 -top-24 md:-top-16">
+                    <div class="bg-white py-8 ps-8 pe-2 rounded-sm text-primary"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
                         <h3 class="font-bold text-2xl">
                             {{ __('content.contact_details') }}
@@ -42,8 +42,8 @@
         <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full max-w-4xl xl:max-w-6xl 2xl:max-w-8xl mx-auto">
             <div class="relative xl:rounded-sm shadow-md" style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
                 <div
-                    class="z-20 absolute end-1/2 -translate-x-1/2 w-max md:start-auto md:end-14 -top-24 md:-top-16 md:translate-x-0">
-                    <div class="bg-white py-8 pr-8 pl-2 rounded-sm text-primary"
+                    class="w-max z-20 absolute end-1/2 ltr:translate-x-1/2 ltr:md:translate-x-0 -translate-x-1/2 md:translate-x-0 md:end-14 ltr:md:end-14 -top-24 md:-top-16">
+                    <div class="bg-white py-8 ps-8 pe-2 rounded-sm text-primary"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
                         <h3 class="font-bold text-2xl">
                             {{ __('content.city_location') }}
