@@ -81,26 +81,26 @@
                 </div>
                 <div class="relative z-20 -mt-16 mx-auto w-full max-w-7xl lg:max-w-3xl xl:max-w-6xl 3xl:max-w-7xl bg-white px-8 pb-6 lg:pb-10 pt-12 rounded-sm"
                     style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                    <form class="flex flex-col xl:flex-row items-center gap-6 sm:gap-8 xl:gap-12">
+                    <form class="flex flex-col xl:flex-row items-center gap-6 sm:gap-8 xl:gap-12 3xl:gap-4">
                         <div
                             class="flex-1 grid grid-cols-2 sm:grid-cols-6 gap-6 w-full xl:flex xl:items-center xl:gap-x-6">
                             <select
-                                class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
+                                class="col-span-2 sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold capitalize rounded-sm focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.city') }}</option>
                             </select>
                             <select
-                                class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
+                                class="sm:col-span-3 w-full 3xl:w-48 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold capitalize rounded-sm focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.town') }}</option>
                             </select>
                             <select
-                                class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold rounded-sm focus:ring-primary focus:outline-0">
+                                class="sm:col-span-2 w-full 3xl:w-56 px-4 bg-position-[left_0.5rem_center] ltr:bg-position-[right_0.5rem_center] appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-semibold capitalize rounded-sm focus:ring-primary focus:outline-0">
                                 <option value="test">{{ __('content.select.property_type') }}</option>
                             </select>
                             <input type="text" name="min"
-                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray rounded-sm focus:ring-primary focus:outline-0"
+                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray capitalize rounded-sm focus:ring-primary focus:outline-0"
                                 placeholder="{{ __('content.price.min') }}">
                             <input type="text" name="min"
-                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray rounded-sm focus:ring-primary focus:outline-0"
+                                class="sm:col-span-2 w-full 3xl:w-40 appearance-none border-0 bg-[#F1F1F1] text-primary-gray font-smeibold placeholder:font-semibold placeholder-primary-gray capitalize  rounded-sm focus:ring-primary focus:outline-0"
                                 placeholder="{{ __('content.price.max') }}">
                         </div>
                         <button type="submit"
@@ -109,21 +109,20 @@
                         </button>
                     </form>
                 </div>
-
-                <div {{-- xl:mx-40 --}}
+                <div
                     class="relative z-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-12 md:gap-6 lg:gap-12 xl:gap-6 3xl:gap-12 mt-16 -mb-20 2xl:max-w-8xl mx-auto">
-                    @for ($i = 0; $i < 4; $i++)
+                    @for ($i = 0; $i < 3; $i++)
                         <x-properties.card />
                     @endfor
                 </div>
             </div>
             <a href="#"
                 class="mt-32 lg:mt-44 xl:hidden text-primary font-semibold flex items-center justify-center gap-2.5">
-                <span>
+                <span class="uppercase">
                     {{ __('content.visit_all') }}
                 </span>
-                <svg class="size-6" data-slot="icon" aria-hidden="true" fill="none" stroke-width="1.5"
-                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg class="size-6 ltr:order-first" data-slot="icon" aria-hidden="true" fill="none"
+                    stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" stroke-linecap="round" stroke-linejoin="round">
                     </path>
                 </svg>
@@ -133,12 +132,14 @@
             <div class="grid grid-cols-1 grid-row-2 gap-20 sm:gap-32 xl:gap-20">
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-y-8 gap-x-10 justify-items-center">
                     <div class="text-primary self-center grid justify-items-center">
-                        <h3 class="text-5xl sm:text-4xl font-bold">{{ __('content.discover.by_city.title') }}</h3>
+                        <h3 class="text-4xl font-bold capitalize">
+                            {{ __('content.discover.by_city.title') }}
+                        </h3>
                         <svg class="my-8" width="203" height="1" viewBox="0 0 203 1" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <line x1="202.675" y1="0.5" x2="0.000183148" y2="0.500018" stroke="#2270AB" />
                         </svg>
-                        <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">
+                        <p class="first-letter:capitalize font-semibold text-gray-800 text-xl text-center max-w-xs">
                             {{ __('content.discover.by_city.subtitle') }}</p>
                     </div>
                     <div class="lg:row-span-2 relative rounded-sm h-60 lg:h-128 xl:h-156 w-full"
@@ -207,13 +208,13 @@
                     </div>
                     <div
                         class="order-first lg:order-0 lg:row-span-2 text-primary self-center grid justify-items-center">
-                        <h3 class="text-5xl sm:text-4xl text-center font-bold">
+                        <h3 class="text-4xl text-center font-bold capitalize">
                             {{ __('content.discover.by_type.title') }}</h3>
                         <svg class="my-8" width="203" height="1" viewBox="0 0 203 1" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <line x1="202.675" y1="0.5" x2="0.000183148" y2="0.500018" stroke="#2270AB" />
                         </svg>
-                        <p class="font-semibold text-gray-800 text-xl text-center max-w-xs">
+                        <p class="first-letter:uppercase font-semibold text-gray-800 text-xl text-center max-w-xs">
                             {{ __('content.discover.by_type.subtitle') }}</p>
                     </div>
                     <div class="lg:col-span-2 rounded-sm relative h-60 xl:h-74 w-full"
@@ -238,7 +239,7 @@
                 </div>
                 <div
                     class="absolute start-1/2 ltr:-translate-x-1/2 translate-x-1/2 w-max rtl:md:translate-x-0 rtl:md:start-14 ltr:md:translate-x-0 ltr:md:start-14 -top-10 md:-top-16">
-                    <div class="bg-white p-10 font-bold text-4xl rounded-sm text-primary"
+                    <div class="bg-white p-10 font-bold text-4xl rounded-sm text-primary capitalize"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">{{ __('content.be_in_touch') }}</div>
                 </div>
                 <div
