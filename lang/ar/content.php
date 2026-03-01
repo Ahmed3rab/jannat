@@ -38,4 +38,5 @@ return [
     'city_location' => 'طرابلس، ليبيا.',
     'location_details'  => 'شارع القبب السياحية بالقرب من مطعم تقسيم',
     'send'  => 'إرسال',
+    'advanced_filters'  => 'بحث متقدم',
 ];
