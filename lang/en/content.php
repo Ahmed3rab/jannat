@@ -32,9 +32,8 @@ return [
         'body' => 'message body',
         'phone_number'  => 'phone humber',
     ],
-
     'contact_details' => 'contact details',
-    'welcome_message'   => 'Mohammed Al-Jahani Company welcomes your inquiries and you can contact us via the following information:',
+    'welcome_message'   => 'Jannat Libya company welcomes your inquiries and you can contact us via the following information:',
     'city_location' => 'Tripoli, Libya',
     'location_details'  => 'Al-Siyahiya, Al-Qubab St, Tripoli, Libya.',
     'send'  => 'send',

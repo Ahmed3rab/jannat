@@ -120,7 +120,7 @@
         </ul>
     </nav>
     <div class="flex items-center justify-center">
-        <h2 class="{{ $title ? 'py-32' : 'py-16' }} text-center text-7xl font-bold text-white">
+        <h2 class="{{ $title ? 'py-32' : 'py-16' }} text-center text-7xl font-bold text-white capitalize">
             {{ $title ?? '' }}
         </h2>
     </div>

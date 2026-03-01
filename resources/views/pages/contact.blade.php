@@ -1,11 +1,11 @@
 <x-layout>
     <x-slot:header>
-        <x-header-alt title="تواصل معنا" />
+        <x-header-alt title="{{ __('pages.contact.title') }}" />
     </x-slot:header>
     <x-slot:main>
-        <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full xl:max-w-6xl 2xl:max-w-8xl mx-auto">
+        <section id="contact" class="mt-50 sm:mt-40 w-full xl:max-w-6xl 2xl:max-w-8xl mx-auto">
             <div class="px-4 lg:px-0 relative xl:rounded-sm shadow-md bg-linear-[280deg] rtl:from-primary rtl:to-[#2270AB] ltr:to-primary ltr:from-[#2270AB]"
-                style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
+                style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                 <div class="absolute inset-0 overflow-hidden">
                     <x-svgs.contact />
                 </div>
@@ -13,10 +13,11 @@
                     class="z-20 absolute start-1/2 ltr:-translate-x-1/2 ltr:md:translate-x-0 translate-x-1/2 md:translate-x-0 w-max md:start-14 ltr:md:start-14 -top-24 md:-top-16">
                     <div class="bg-white py-8 ps-8 pe-2 rounded-sm text-primary"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
-                        <h3 class="font-bold text-2xl">
+                        <h3 class="font-bold text-2xl capitalize">
                             {{ __('content.contact_details') }}
                         </h3>
-                        <p class="mt-3 max-w-xs font-medium text-lg">{{ __('content.welcome_message') }}</p>
+                        <p class="mt-3 max-w-xs font-medium text-lg first-letter:uppercase">
+                            {{ __('content.welcome_message') }}</p>
                     </div>
                 </div>
                 <div
@@ -40,15 +41,16 @@
             </div>
         </section>
         <section id="contact" class="mt-50 sm:mt-40 lg:mt-50 w-full max-w-4xl xl:max-w-6xl 2xl:max-w-8xl mx-auto">
-            <div class="relative xl:rounded-sm shadow-md" style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);">
+            <div class="relative xl:rounded-sm shadow-md" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                 <div
                     class="w-max z-20 absolute end-1/2 ltr:translate-x-1/2 ltr:md:translate-x-0 -translate-x-1/2 md:translate-x-0 md:end-14 ltr:md:end-14 -top-24 md:-top-16">
                     <div class="bg-white py-8 ps-8 pe-2 rounded-sm text-primary"
                         style="box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25)">
-                        <h3 class="font-bold text-2xl">
+                        <h3 class="font-bold text-2xl capitalize">
                             {{ __('content.city_location') }}
                         </h3>
-                        <p class="mt-3 max-w-xs font-medium text-lg">{{ __('content.location_details') }}</p>
+                        <p class="mt-3 max-w-xs font-medium text-lg first-letter:uppercase">
+                            {{ __('content.location_details') }}</p>
                     </div>
                 </div>
                 <div class="relative z-10 aspect-video w-full xl:rounded-sm">
