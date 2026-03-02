@@ -79,7 +79,7 @@ class Property extends Model
         return 'reference';
     }
 
-    public array $translatable = ['title', 'description', 'brief', 'meta_title', 'meta_description'];
+    public array $translatable = ['title', 'description', 'brief', 'meta_title', 'meta_description', 'nearest_landmark'];
 
     protected function casts(): array
     {
@@ -112,5 +112,10 @@ class Property extends Model
     public function features(): BelongsToMany
     {
         return $this->belongsToMany(Feature::class)->withPivot('value')->withTimestamps();
+    }
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
     }
 }

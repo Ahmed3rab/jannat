@@ -31,9 +31,18 @@ return new class extends Migration {
             $table->json('meta_title')->nullable();
             $table->json('meta_description')->nullable();
             $table->string('meta_image')->nullable();
+            $table->foreignId('location_id')->constrained('locations')->restrictOnDelete();
+            $table->json('nearest_landmark')->nullable();
+
+            $table->string('map_url')->nullable();
+            $table->decimal('latitude', 10, 7)->nullable();
+            $table->decimal('longitude', 10, 7)->nullable();
+
             $table->softDeletes();
+
             $table->index('type_id');
             $table->index('category_id');
+            $table->index('location_id');
             $table->index('published_at');
             $table->index('price');
             $table->index('area');
@@ -52,7 +61,6 @@ return new class extends Migration {
             $table->unsignedInteger('bathrooms_total')->default(0)->index();
             $table->unsignedInteger('offices_total')->default(0)->index();
             $table->unsignedInteger('ac_units_total')->default(0)->index();
-
             $table->boolean('is_fully_furnished')->default(false)->index();
             $table->timestamps();
         });
