@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->integer('bathrooms')->default(0)->index();
             $table->integer('offices')->default(0)->index();
             $table->integer('ac_units')->default(0)->index();
-            $table->json('furnishing')->nullable()->index();
+            $table->enum('furnishing', ['none','partial','full'])->nullable()->index();
             $table->timestamps();
             $table->unique('property_floor_id');
         });

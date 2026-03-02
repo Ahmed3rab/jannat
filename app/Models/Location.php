@@ -31,7 +31,7 @@ class Location extends Model
             }
             if ($location->parent_id) {
 
-                $parent = Location::find($location->parent_id);
+                $parent = self::find($location->parent_id);
 
                 if (!$parent) {
                     throw new \Exception('Invalid parent location.');

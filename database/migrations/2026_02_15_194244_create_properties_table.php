@@ -11,8 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('properties', function (Blueprint $table) {
-            $table->id();
-            $table->uuid('uuid')->unique();
+            $table->uuid('id')->unique();
             $table->string('reference')->unique();
             $table->json('title');
             $table->json('description');
@@ -48,9 +47,10 @@ return new class extends Migration {
             $table->index('area');
             $table->index('rooms');
             $table->index('floors');
-            $table->index('floored_are');
+            $table->index('floored_area');
             $table->index('parking_capacity');
             $table->index(['offer', 'type_id', 'category_id', 'price']);
+            $table->index(['offer', 'location_id', 'price']);
 
             $table->unsignedInteger('rooms_total')->default(0)->index();
             $table->unsignedInteger('main_rooms_total')->default(0)->index();

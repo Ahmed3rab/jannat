@@ -8,11 +8,11 @@ trait HasSeo
 {
     public function getSeoTitle(): string
     {
-        return $this->meta_title ?? $this->title;
+        return $this->getTranslation('meta_title', app()->getLocale()) ?: $this->getTranslation('title', app()->getLocale());
     }
 
     public function getSeoDescription(): string
     {
-        return $this->meta_description ?? Str::limit(strip_tags($this->brief), 160);
+        return $this->getTranslation('meta_description', app()->getLocale()) ?: $this->getTranslation('brief', app()->getLocale());
     }
 }
