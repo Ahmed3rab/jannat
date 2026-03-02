@@ -21,11 +21,11 @@ return new class extends Migration {
             $table->string('offer')->index();
             $table->foreignId('type_id')->constrained('types')->nullOnDelete();
             $table->foreignId('category_id')->constrained('categories')->nullOnDelete();
-            $table->float('area')->nullable();
+            $table->decimal('area', 10, 2)->nullable();
             $table->integer('floors')->nullable();
-            $table->float('floored_area')->nullable();
+            $table->decimal('floored_area', 10, 2)->nullable();
             $table->integer('rooms')->nullable();
-            $table->float('garage_size')->nullable();
+            $table->decimal('garage_size', 10, 2)->nullable();
             $table->dateTime('published_at');
             $table->dateTime('delivery_date')->nullable();
             $table->json('meta_title')->nullable();
