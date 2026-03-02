@@ -30,12 +30,20 @@ class Location extends Model
                 $location->slug = Str::slug($name);
             }
             if ($location->parent_id) {
+
                 $parent = Location::find($location->parent_id);
+
                 if (!$parent) {
                     throw new \Exception('Invalid parent location.');
                 }
+
                 if ($location->level !== $parent->level + 1) {
-                    throw new \Exception('Invalid hierarchy level.');
+                    throw new \Exception('Hierarchy level mismatch.');
+                }
+            } else {
+                // Only one country allowed
+                if ($location->level !== 0) {
+                    throw new \Exception('Only country can have no parent.');
                 }
             }
         });
