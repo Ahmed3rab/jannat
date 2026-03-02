@@ -25,7 +25,7 @@ return new class extends Migration {
             $table->integer('floors')->nullable();
             $table->decimal('floored_area', 10, 2)->nullable();
             $table->integer('rooms')->nullable();
-            $table->decimal('garage_size', 10, 2)->nullable();
+            $table->decimal('parking_capacity', 10, 2)->nullable();
             $table->dateTime('published_at');
             $table->dateTime('delivery_date')->nullable();
             $table->json('meta_title')->nullable();
@@ -40,7 +40,7 @@ return new class extends Migration {
             $table->index('rooms');
             $table->index('floors');
             $table->index('floored_are');
-            $table->index('garage_size');
+            $table->index('parking_capacity');
             $table->index(['offer', 'type_id', 'category_id', 'price']);
 
             $table->unsignedInteger('rooms_total')->default(0)->index();

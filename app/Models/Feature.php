@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
+
+class Feature extends Model
+{
+    use HasTranslations;
+
+    public array $translatable = ['name'];
+
+    protected $fillable = [
+        'name',
+        'slug',
+        'type',
+        'group',
+    ];
+
+    public function properties()
+    {
+        return $this->belongsToMany(Property::class)->withPivot('value')->withTimestamps();
+    }
+}

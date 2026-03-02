@@ -7,6 +7,7 @@ use App\Traits\HasSeo;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Spatie\Translatable\HasTranslations;
@@ -103,5 +104,13 @@ class Property extends Model
     public function type(): BelongsTo
     {
         return $this->belongsTo(Type::class);
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function features(): BelongsToMany
+    {
+        return $this->belongsToMany(Feature::class)->withPivot('value')->withTimestamps();
     }
 }
