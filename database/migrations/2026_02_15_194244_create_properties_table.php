@@ -42,6 +42,18 @@ return new class extends Migration {
             $table->index('floored_are');
             $table->index('garage_size');
             $table->index(['offer', 'type_id', 'category_id', 'price']);
+
+            $table->unsignedInteger('rooms_total')->default(0)->index();
+            $table->unsignedInteger('main_rooms_total')->default(0)->index();
+            $table->unsignedInteger('saloons_total')->default(0)->index();
+            $table->unsignedInteger('living_rooms_total')->default(0)->index();
+
+            $table->unsignedInteger('kitchens_total')->default(0)->index();
+            $table->unsignedInteger('bathrooms_total')->default(0)->index();
+            $table->unsignedInteger('offices_total')->default(0)->index();
+            $table->unsignedInteger('ac_units_total')->default(0)->index();
+
+            $table->boolean('is_fully_furnished')->default(false)->index();
             $table->timestamps();
         });
     }
