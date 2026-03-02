@@ -19,11 +19,7 @@ class Property extends Model
     use SoftDeletes;
     use HasSeo;
 
-    public $incrementing = false;
-
-    protected $keyType = 'string';
-
-    protected $guarded = [];
+    protected $guarded = ['id'];
 
     public array $translatable = ['title', 'description', 'brief', 'meta_title', 'meta_description', 'nearest_landmark'];
 

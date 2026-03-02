@@ -11,15 +11,16 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('properties', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->id();
+            $table->uuid('uuid')->unique();
             $table->string('reference')->unique();
             $table->json('title');
             $table->json('description');
             $table->json('brief')->nullable();
             $table->decimal('price', 15, 2)->nullable();
             $table->string('offer')->index();
-            $table->foreignId('type_id')->constrained('types')->nullOnDelete();
-            $table->foreignId('category_id')->constrained('categories')->nullOnDelete();
+            $table->foreignId('type_id')->constrained('types');
+            $table->foreignId('category_id')->constrained('categories');
             $table->decimal('area', 10, 2)->nullable();
             $table->integer('floors')->nullable();
             $table->decimal('floored_area', 10, 2)->nullable();
@@ -30,7 +31,7 @@ return new class extends Migration {
             $table->json('meta_title')->nullable();
             $table->json('meta_description')->nullable();
             $table->string('meta_image')->nullable();
-            $table->foreignId('location_id')->constrained('locations')->restrictOnDelete();
+            $table->foreignId('location_id')->constrained('locations');
             $table->json('nearest_landmark')->nullable();
 
             $table->string('map_url')->nullable();
