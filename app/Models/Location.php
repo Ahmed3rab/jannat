@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 use Spatie\Translatable\HasTranslations;
 
 class Location extends Model
@@ -26,25 +27,18 @@ class Location extends Model
         static::creating(function ($location) {
             if (empty($location->slug)) {
                 $name = $location->getTranslation('name', 'en') ?? $location->getTranslation('name', 'ar');
-
                 $location->slug = Str::slug($name);
             }
-            if ($location->parent_id) {
+        });
+        static::updating(function ($location) {
+            if ($location->getOriginal('slug') === 'libya') {
+                throw new \Exception('Libya location is locked.');
+            }
+        });
 
-                $parent = self::find($location->parent_id);
-
-                if (!$parent) {
-                    throw new \Exception('Invalid parent location.');
-                }
-
-                if ($location->level !== $parent->level + 1) {
-                    throw new \Exception('Hierarchy level mismatch.');
-                }
-            } else {
-                // Only one country allowed
-                if ($location->level !== 0) {
-                    throw new \Exception('Only country can have no parent.');
-                }
+        static::deleting(function ($location) {
+            if ($location->slug === 'libya') {
+                throw new \Exception('Libya location cannot be deleted.');
             }
         });
     }
