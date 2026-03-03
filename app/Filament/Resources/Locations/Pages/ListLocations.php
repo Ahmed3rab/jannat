@@ -15,15 +15,7 @@ class ListLocations extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make()
-                ->modalWidth('lg')
-                    ->using(function (array $data) {
-                        try {
-                            return Location::create($data);
-                        } catch (ValidationException $e) {
-                            throw $e;
-                        }
-                    }),
+            CreateAction::make()->modalWidth('lg'),
         ];
     }
 }
