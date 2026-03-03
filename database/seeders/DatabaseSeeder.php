@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             LibyaLocationSeeder::class,
             PropertyTypeSeeder::class,
+            PropertyCategorySeeder::class,
         ]);
     }
 }
