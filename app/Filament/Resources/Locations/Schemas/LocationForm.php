@@ -53,16 +53,16 @@ class LocationForm
                         ->reactive(),
                     TextInput::make('name.ar')
                         ->label(__('filament.location.fields.name.ar'))
+                        ->string()
                         ->minLength(3)
                         ->maxLength(70)
                         ->required(),
                     TextInput::make('name.en')
                         ->label(__('filament.location.fields.name.en'))
+                        ->string()
                         ->minLength(3)
                         ->maxLength(70)
-                        ->required()
-                        ->live(onBlur: true)
-                        ->afterStateUpdated(fn($state, callable $set) => $set('slug', Str::slug($state))),
+                        ->required(),
                 ]),
             ]);
     }

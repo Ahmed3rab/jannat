@@ -54,10 +54,7 @@ class FeatureResource extends Resource
                 ->string()
                 ->minLength(3)
                 ->maxLength(50)
-                ->required()
-                ->live(onBlur: true)
-                ->afterStateUpdated(fn($state, callable $set) => $set('slug', Str::slug($state))),
-
+                ->required(),
             Select::make('type')
                 ->label(__('filament.feature.fields.type'))
                 ->options([
@@ -67,6 +64,12 @@ class FeatureResource extends Resource
                 ])
                 ->live()
                 ->required(),
+            Select::make('feature_group_id')
+                ->label(__('filament.feature.fields.group'))
+                ->relationship('group', 'name')
+                ->getOptionLabelFromRecordUsing(fn($record) => $record->getTranslation('name', 'ar'))
+                ->required(),
+
             Repeater::make('options')
                 ->label(__('filament.feature.fields.type_options.label'))
                 ->relationship()
@@ -87,12 +90,6 @@ class FeatureResource extends Resource
                 ])
                 ->visible(fn(Get $get) => $get('type') === 'select')
                 ->collapsed(),
-            Select::make('feature_group_id')
-                ->label(__('filament.feature.fields.group'))
-                ->relationship('group', 'name')
-                ->getOptionLabelFromRecordUsing(fn($record) => $record->getTranslation('name', 'ar'))
-                ->required(),
-            Hidden::make('slug'),
         ]);
     }
 
