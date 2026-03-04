@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
             LibyaLocationSeeder::class,
             PropertyTypeSeeder::class,
             PropertyCategorySeeder::class,
+            PropertyFeatureSeeder::class,
         ]);
     }
 }

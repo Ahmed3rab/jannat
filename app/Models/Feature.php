@@ -22,4 +22,9 @@ class Feature extends Model
     {
         return $this->belongsToMany(Property::class)->withPivot('value')->withTimestamps();
     }
+
+    public function options()
+    {
+        return $this->hasMany(FeatureOption::class);
+    }
 }
