@@ -28,9 +28,6 @@ return new class extends Migration {
             $table->decimal('parking_capacity', 10, 2)->nullable();
             $table->dateTime('published_at');
             $table->dateTime('delivery_date')->nullable();
-            $table->json('meta_title')->nullable();
-            $table->json('meta_description')->nullable();
-            $table->string('meta_image')->nullable();
             $table->foreignId('location_id')->constrained('locations');
             $table->json('nearest_landmark')->nullable();
 

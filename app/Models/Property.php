@@ -21,7 +21,7 @@ class Property extends Model
 
     protected $guarded = ['id'];
 
-    public array $translatable = ['title', 'description', 'brief', 'meta_title', 'meta_description', 'nearest_landmark'];
+    public array $translatable = ['title', 'description', 'brief', 'nearest_landmark'];
 
     protected static function booted(): void
     {
