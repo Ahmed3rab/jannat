@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -12,6 +13,7 @@ use Spatie\Translatable\HasTranslations;
 class Location extends Model
 {
     use HasTranslations;
+    use HasSlug;
 
     public array $translatable = ['name'];
 
@@ -24,12 +26,6 @@ class Location extends Model
 
     protected static function booted(): void
     {
-        static::creating(function ($location) {
-            if (empty($location->slug)) {
-                $name = $location->getTranslation('name', 'en') ?? $location->getTranslation('name', 'ar');
-                $location->slug = Str::slug($name);
-            }
-        });
         static::updating(function ($location) {
             if ($location->getOriginal('slug') === 'libya') {
                 throw new \Exception('Libya location is locked.');

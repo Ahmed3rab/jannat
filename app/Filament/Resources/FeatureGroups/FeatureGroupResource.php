@@ -43,8 +43,7 @@ class FeatureGroupResource extends Resource
                     ->string()
                     ->minLength(3)
                     ->maxLength(50)
-                    ->required()
-                    ->live(onBlur: true),
+                    ->required(),
                 TextInput::make('sort_order')
                     ->label(__('filament.feature_group.fields.sort_order'))
                     ->numeric()

@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Spatie\Translatable\HasTranslations;
 
 class Feature extends Model
 {
     use HasTranslations;
+    use HasSlug;
 
     public array $translatable = ['name'];
 
@@ -15,6 +18,7 @@ class Feature extends Model
         'name',
         'slug',
         'type',
+        'feature_group_id',
     ];
 
     public function properties()

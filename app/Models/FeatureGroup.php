@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Traits\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Spatie\Translatable\HasTranslations;
@@ -9,6 +10,7 @@ use Spatie\Translatable\HasTranslations;
 class FeatureGroup extends Model
 {
     use HasTranslations;
+    use HasSlug;
 
     public array $translatable = ['name'];
 
@@ -17,15 +19,6 @@ class FeatureGroup extends Model
         'slug',
         'sort_order',
     ];
-
-    protected static function booted(): void
-    {
-        static::creating(function ($group) {
-            if (empty($group->slug)) {
-                $group->slug = Str::slug($group->getTranslation('name', 'en'));
-            }
-        });
-    }
 
     public function features()
     {
