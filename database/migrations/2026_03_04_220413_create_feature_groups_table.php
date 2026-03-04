@@ -10,12 +10,11 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('features', function (Blueprint $table) {
+        Schema::create('feature_groups', function (Blueprint $table) {
             $table->id();
             $table->json('name');
             $table->string('slug')->unique();
-            $table->enum('type', ['boolean', 'number', 'select']);
-            $table->foreignId('feature_group_id')->nullable()->constrained()->nullOnDelete();
+            $table->integer('sort_order')->default(0);
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('features');
+        Schema::dropIfExists('feature_groups');
     }
 };

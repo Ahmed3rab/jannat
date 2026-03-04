@@ -15,7 +15,6 @@ class Feature extends Model
         'name',
         'slug',
         'type',
-        'group',
     ];
 
     public function properties()
@@ -26,5 +25,9 @@ class Feature extends Model
     public function options()
     {
         return $this->hasMany(FeatureOption::class);
+    }
+    public function group()
+    {
+        return $this->belongsTo(FeatureGroup::class, 'feature_group_id');
     }
 }
