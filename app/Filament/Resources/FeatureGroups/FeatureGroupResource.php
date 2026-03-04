@@ -2,31 +2,36 @@
 
 namespace App\Filament\Resources\FeatureGroups;
 
-use App\Filament\Resources\FeatureGroups\Pages\CreateFeatureGroup;
-use App\Filament\Resources\FeatureGroups\Pages\EditFeatureGroup;
 use App\Filament\Resources\FeatureGroups\Pages\ListFeatureGroups;
-use App\Filament\Resources\FeatureGroups\Schemas\FeatureGroupForm;
-use App\Filament\Resources\FeatureGroups\Tables\FeatureGroupsTable;
 use App\Models\FeatureGroup;
 use BackedEnum;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
+use Filament\Resources\ResourceConfiguration;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
+use UnitEnum;
 
+/**
+ * @extends Resource<Model,ResourceConfiguration>
+ */
 class FeatureGroupResource extends Resource
 {
     protected static ?string $model = FeatureGroup::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedFolder;
 
     protected static ?string $recordTitleAttribute = 'name';
+
+    protected static string|UnitEnum|null $navigationGroup = 'المرافق والمواصفات';
+
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {
