@@ -30,6 +30,7 @@ class Feature extends Model
     {
         return $this->hasMany(FeatureOption::class);
     }
+
     public function group()
     {
         return $this->belongsTo(FeatureGroup::class, 'feature_group_id');
