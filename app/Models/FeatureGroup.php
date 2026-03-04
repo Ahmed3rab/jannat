@@ -22,9 +22,7 @@ class FeatureGroup extends Model
     {
         static::creating(function ($group) {
             if (empty($group->slug)) {
-                $group->slug = Str::slug(
-                    $group->getTranslation('name', 'en')
-                );
+                $group->slug = Str::slug($group->getTranslation('name', 'en'));
             }
         });
     }

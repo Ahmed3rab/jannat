@@ -20,6 +20,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -33,6 +34,11 @@ class FeatureResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAdjustmentsHorizontal;
 
     protected static ?string $recordTitleAttribute = 'name';
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->with('group');
+    }
 
     public static function form(Schema $schema): Schema
     {
@@ -81,12 +87,11 @@ class FeatureResource extends Resource
                 ])
                 ->visible(fn(Get $get) => $get('type') === 'select')
                 ->collapsed(),
-            TextInput::make('group')
+            Select::make('feature_group_id')
                 ->label(__('filament.feature.fields.group'))
-                ->string()
-                ->minLength(3)
-                ->maxLength(50)
-                ->placeholder(__('filament.feature.fields.group_hint')),
+                ->relationship('group', 'name')
+                ->getOptionLabelFromRecordUsing(fn($record) => $record->getTranslation('name', 'ar'))
+                ->required(),
             Hidden::make('slug'),
         ]);
     }
@@ -97,13 +102,15 @@ class FeatureResource extends Resource
             ->columns([
                 TextColumn::make('name')
                     ->label(__('filament.feature.fields.name.ar'))
-                    ->formatStateUsing(fn($state, $record) => $record->getTranslation('name', app()->getLocale())),
+                    ->formatStateUsing(fn($state, $record) => $record->getTranslation('name', 'ar')),
                 TextColumn::make('type')
                     ->label(__('filament.feature.fields.type'))
                     ->formatStateUsing(fn($state) => __('filament.feature.fields.types.' . $state))
                     ->badge(),
-                TextColumn::make('group')
-                    ->label(__('filament.feature.fields.group')),
+                TextColumn::make('group.name')
+                    ->label(__('filament.feature.fields.group'))
+                    ->formatStateUsing(fn($state, $record) => $record->group ? $record->group->getTranslation('name', 'ar') : '-')
+                    ->sortable(),
             ])
             ->filters([
                 //

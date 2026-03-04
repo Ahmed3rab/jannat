@@ -17,14 +17,17 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->create([
+            'name' => 'admin',
+            'email' => 'admin@jannatlibya.ly',
+            'password'  => bcrypt('password'),
+            'email_verified_at' => now(),
+        ]);
         $this->call([
             LibyaLocationSeeder::class,
             PropertyTypeSeeder::class,
             PropertyCategorySeeder::class,
+            FeatureGroupSeeder::class,
             PropertyFeatureSeeder::class,
         ]);
     }

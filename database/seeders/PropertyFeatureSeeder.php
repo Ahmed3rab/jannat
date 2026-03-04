@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Feature;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\FeatureGroup;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -17,43 +17,89 @@ class PropertyFeatureSeeder extends Seeder
         $features = [
 
             // Interior
-            ['en' => 'Balcony', 'ar' => 'شرفة', 'type' => 'boolean', 'group' => 'Interior'],
-            ['en' => 'Central AC', 'ar' => 'تكييف مركزي', 'type' => 'boolean', 'group' => 'Interior'],
-            ['en' => 'Elevator', 'ar' => 'مصعد', 'type' => 'boolean', 'group' => 'Interior'],
-            ['en' => 'Furnished', 'ar' => 'مفروشة', 'type' => 'boolean', 'group' => 'Interior'],
+            [
+                'group' => 'interior',
+                'en' => 'Furnished',
+                'ar' => 'مفروشة',
+                'type' => 'boolean',
+            ],
+            [
+                'group' => 'interior',
+                'en' => 'Built-in Wardrobes',
+                'ar' => 'خزائن حائط',
+                'type' => 'boolean',
+            ],
 
             // Exterior
-            ['en' => 'Garden', 'ar' => 'حديقة', 'type' => 'boolean', 'group' => 'Exterior'],
-            ['en' => 'Private Pool', 'ar' => 'مسبح خاص', 'type' => 'boolean', 'group' => 'Exterior'],
-            ['en' => 'Terrace', 'ar' => 'سطح', 'type' => 'boolean', 'group' => 'Exterior'],
+            [
+                'group' => 'exterior',
+                'en' => 'Garden',
+                'ar' => 'حديقة',
+                'type' => 'boolean',
+            ],
+            [
+                'group' => 'exterior',
+                'en' => 'Balcony',
+                'ar' => 'شرفة',
+                'type' => 'boolean',
+            ],
 
             // Utilities
-            ['en' => 'Electricity Meter', 'ar' => 'عداد كهرباء', 'type' => 'boolean', 'group' => 'Utilities'],
-            ['en' => 'Water Meter', 'ar' => 'عداد مياه', 'type' => 'boolean', 'group' => 'Utilities'],
-            ['en' => 'Generator', 'ar' => 'مولد كهرباء', 'type' => 'boolean', 'group' => 'Utilities'],
+            [
+                'group' => 'utilities',
+                'en' => 'Water Supply',
+                'ar' => 'مياه',
+                'type' => 'boolean',
+            ],
+            [
+                'group' => 'utilities',
+                'en' => 'Electricity',
+                'ar' => 'كهرباء',
+                'type' => 'boolean',
+            ],
 
-            // Numeric
-            ['en' => 'Year Built', 'ar' => 'سنة البناء', 'type' => 'number', 'group' => 'Details'],
-            ['en' => 'Ceiling Height', 'ar' => 'ارتفاع السقف', 'type' => 'number', 'group' => 'Details'],
+            // Building
+            [
+                'group' => 'building',
+                'en' => 'Elevator',
+                'ar' => 'مصعد',
+                'type' => 'boolean',
+            ],
+            [
+                'group' => 'building',
+                'en' => 'Year Built',
+                'ar' => 'سنة البناء',
+                'type' => 'number',
+            ],
 
-            // Select
-            ['en' => 'Finishing Type', 'ar' => 'نوع التشطيب', 'type' => 'select', 'group' => 'Details'],
-            ['en' => 'View Type', 'ar' => 'نوع الإطلالة', 'type' => 'select', 'group' => 'Details'],
+            // Security
+            [
+                'group' => 'security',
+                'en' => 'Security Guard',
+                'ar' => 'حراسة',
+                'type' => 'boolean',
+            ],
         ];
 
         foreach ($features as $feature) {
+
+            $group = FeatureGroup::where('slug', $feature['group'])->first();
+
+            if (!$group) {
+                continue; // safety
+            }
+
             Feature::firstOrCreate(
-                ['slug' => Str::slug($feature['en'])],
+                ['slug' => \Str::slug($feature['en'])],
                 [
                     'name' => [
                         'en' => $feature['en'],
                         'ar' => $feature['ar'],
                     ],
                     'type' => $feature['type'],
-                    'group' => $feature['group'],
+                    'feature_group_id' => $group->id,
                 ]
             );
         }
-        //
     }
 }
