@@ -116,15 +116,6 @@ class FloorsRelationManager extends RelationManager
                 CreateAction::make()
                     ->modalHeading(__('filament.floors.modals.create.title'))
                     ->label(__('filament.floors.modals.create.title'))
-                    ->mutateFormDataUsing(function (array $data) {
-
-                        $this->rooms = $data['rooms'] ?? [];
-                        $this->services = $data['services'] ?? [];
-
-                        unset($data['rooms'], $data['services']);
-
-                        return $data;
-                    })
                     ->after(function ($record) {
                         if (!empty($this->rooms)) {
                             $record->rooms()->create($this->rooms);
@@ -134,12 +125,21 @@ class FloorsRelationManager extends RelationManager
                             $record->services()->create($this->services);
                         }
 
-                        PropertyAggregator::recalculate($record->property);
+                        propertyaggregator::recalculate($record->property);
                     }),
             ])
             ->recordActions([
                 EditAction::make()
-                    ->modalHeading(__('filament.floors.modals.edit.title')),
+                    ->modalHeading(__('filament.floors.modals.edit.title'))
+                    ->after(function ($record) {
+                        if (!empty($this->rooms)) {
+                            $record->rooms()->updateOrCreate([], $this->rooms);
+                        }
+                        if (!empty($this->services)) {
+                            $record->services()->updateOrCreate([], $this->services);
+                        }
+                        PropertyAggregator::recalculate($record->property);
+                    }),
                 DeleteAction::make()
                     ->modalHeading(__('filament.floors.modals.delete.title'))
                     ->requiresConfirmation(),
