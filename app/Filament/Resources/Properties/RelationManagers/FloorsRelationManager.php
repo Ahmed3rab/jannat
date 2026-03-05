@@ -55,17 +55,18 @@ class FloorsRelationManager extends RelationManager
 
                 Section::make('Room Distribution')
                     ->heading(__('filament.floors.sections.rooms'))
+                    ->relationship('rooms')
                     ->schema([
-                        TextInput::make('rooms.rooms')
+                        TextInput::make('rooms')
                             ->label(__('filament.floors.fields.rooms'))
                             ->numeric(),
-                        TextInput::make('rooms.main_rooms')
+                        TextInput::make('main_rooms')
                             ->label(__('filament.floors.fields.main_rooms'))
                             ->numeric(),
-                        TextInput::make('rooms.saloons')
+                        TextInput::make('saloons')
                             ->label(__('filament.floors.fields.saloons'))
                             ->numeric(),
-                        TextInput::make('rooms.living_rooms')
+                        TextInput::make('living_rooms')
                             ->label(__('filament.floors.fields.living_rooms'))
                             ->numeric(),
                     ])
@@ -74,20 +75,21 @@ class FloorsRelationManager extends RelationManager
 
                 Section::make('Services')
                     ->heading(__('filament.floors.sections.services'))
+                    ->relationship('services')
                     ->schema([
-                        TextInput::make('services.kitchens')
+                        TextInput::make('kitchens')
                             ->label(__('filament.floors.fields.kitchens'))
                             ->numeric(),
-                        TextInput::make('services.bathrooms')
+                        TextInput::make('bathrooms')
                             ->label(__('filament.floors.fields.bathrooms'))
                             ->numeric(),
-                        TextInput::make('services.offices')
+                        TextInput::make('offices')
                             ->label(__('filament.floors.fields.offices'))
                             ->numeric(),
-                        TextInput::make('services.ac_units')
+                        TextInput::make('ac_units')
                             ->label(__('filament.floors.fields.ac_units'))
                             ->numeric(),
-                        Select::make('services.furnishing')
+                        Select::make('furnishing')
                             ->label(__('filament.floors.fields.furnishing'))
                             ->options([
                                 'none' => 'غير مفروش',
@@ -137,46 +139,7 @@ class FloorsRelationManager extends RelationManager
             ])
             ->recordActions([
                 EditAction::make()
-                    ->modalHeading(__('filament.floors.modals.edit.title'))
-                    ->fillForm(function ($record) {
-                        $data = $record->toArray();
-                        if ($record->rooms) {
-                            $data['rooms'] = [
-                                'rooms' => $record->rooms->rooms,
-                                'main_rooms' => $record->rooms->main_rooms,
-                                'saloons' => $record->rooms->saloons,
-                                'living_rooms' => $record->rooms->living_rooms,
-                            ];
-                        }
-                        if ($record->services) {
-                            $data['services'] = [
-                                'kitchens' => $record->services->kitchens,
-                                'bathrooms' => $record->services->bathrooms,
-                                'offices' => $record->services->offices,
-                                'ac_units' => $record->services->ac_units,
-                                'furnishing' => $record->services->furnishing,
-                            ];
-                        }
-                        return $data;
-                    })
-                    ->mutateFormDataUsing(function (array $data) {
-
-                        $this->rooms = $data['rooms'] ?? [];
-                        $this->services = $data['services'] ?? [];
-
-                        unset($data['rooms'], $data['services']);
-
-                        return $data;
-                    })
-                    ->after(function ($record) {
-                        if (!empty($this->rooms)) {
-                            $record->rooms()->updateOrCreate([], $this->rooms);
-                        }
-                        if (!empty($this->services)) {
-                            $record->services()->updateOrCreate([], $this->services);
-                        }
-                        PropertyAggregator::recalculate($record->property);
-                    }),
+                    ->modalHeading(__('filament.floors.modals.edit.title')),
                 DeleteAction::make()
                     ->modalHeading(__('filament.floors.modals.delete.title'))
                     ->requiresConfirmation(),
