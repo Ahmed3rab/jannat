@@ -107,14 +107,12 @@ class PropertyForm
 
                     RichEditor::make('description.ar')
                         ->label(__('filament.property.fields.description.ar'))
-                        ->string()
                         ->minLength(3)
                         ->maxLength(250)
                         ->required(),
 
                     RichEditor::make('description.en')
                         ->label(__('filament.property.fields.description.en'))
-                        ->string()
                         ->minLength(3)
                         ->maxLength(250)
                         ->required(),

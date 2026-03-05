@@ -10,8 +10,6 @@ class FloorService extends Model
 {
     use HasTranslations;
 
-    public array $translatable = ['furnishing'];
-
     protected $fillable = [
         'property_floor_id',
         'kitchens',

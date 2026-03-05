@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->decimal('area', 10, 2)->nullable();
             $table->decimal('floored_area', 10, 2)->nullable();
             $table->index(['property_id', 'sort_order']);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

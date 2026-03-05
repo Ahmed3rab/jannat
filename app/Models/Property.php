@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Spatie\Translatable\HasTranslations;
@@ -23,9 +24,20 @@ class Property extends Model
 
     public array $translatable = ['title', 'description', 'brief', 'nearest_landmark'];
 
+    /**
+     * Get the columns that should receive a unique identifier.
+     *
+     * @return array<int, string>
+     */
+    public function uniqueIds(): array
+    {
+        return ['uuid'];
+    }
+
     protected static function booted(): void
     {
         static::creating(function (Property $property) {
+            $property->published_at = now();
             if (empty($property->reference)) {
                 $property->reference = self::generateReference();
             }
@@ -75,6 +87,14 @@ class Property extends Model
     public function features(): BelongsToMany
     {
         return $this->belongsToMany(Feature::class)->withPivot('value')->withTimestamps();
+    }
+
+    /**
+     * @return HasMany<PropertyFloor>
+     */
+    public function floors(): HasMany
+    {
+        return $this->hasMany(PropertyFloor::class)->withTrashed();
     }
 
     public function location()
