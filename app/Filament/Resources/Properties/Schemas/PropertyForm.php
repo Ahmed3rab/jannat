@@ -2,44 +2,68 @@
 
 namespace App\Filament\Resources\Properties\Schemas;
 
+use App\Enums\Offer;
 use App\Filament\Resources\Properties\Schemas\Sections\BasicInfo;
 use App\Filament\Resources\Properties\Schemas\Sections\Classification;
 use App\Filament\Resources\Properties\Schemas\Sections\Details;
 use App\Filament\Resources\Properties\Schemas\Sections\Features;
 use App\Filament\Resources\Properties\Schemas\Sections\Location;
-use App\Models\FeatureGroup;
+use App\Models\Property;
 use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs;
-use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
-use Illuminate\Database\Eloquent\Model;
 
 class PropertyForm
 {
     public static function configure(Schema $schema): Schema
     {
         return $schema->schema([
-            Tabs::make('Property')
-                ->tabs([
-                    BasicInfo::make(),
-                    Classification::make(),
-                    Details::make(),
-                    Features::make(),
-                    Location::make(),
-                ])
-                ->columnSpanFull(),
+            Grid::make()->columns(12)->columnSpanFull()->schema([
+                Section::make()
+                    ->columnSpan(8)
+                    ->heading(__('filament.property.sections.basic_info'))
+                    ->schema([
+                        Tabs::make('Property')
+                            ->contained(true)
+                            ->tabs([
+                                BasicInfo::make(),
+                                Classification::make(),
+                                Details::make(),
+                                Features::make(),
+                                Location::make(),
+                            ])
+                            ->columnSpan(8),
+                    ]),
+                Section::make()
+                    ->columnSpan(4)
+                    ->heading(__('filament.property.sections.meta_column'))
+                    ->schema([
+                        Grid::make()->columns(2)->schema([
+                            TextInput::make('price')
+                                ->label(__('filament.property.fields.price'))
+                                ->numeric()
+                                ->required(),
+                            Select::make('offer')
+                                ->label(__('filament.property.fields.offer'))
+                                ->options(Offer::options())
+                                ->required(),
+                        ]),
+                        DatePicker::make('delivery_date')
+                            ->label(__('filament.property.fields.delivery_date'))
+                            ->nullable(),
+                    ]),
+            ]),
         ]);
     }
 
-    public static function afterSave(Model $record, array $data): void
+    /**
+     * @param array<int,mixed> $data
+     */
+    public static function afterSave(Property $record, array $data): void
     {
         if (!isset($data['features'])) {
             return;
@@ -61,6 +85,10 @@ class PropertyForm
         $record->features()->sync($sync);
     }
 
+    /**
+     * @param array<int,mixed> $data
+     * @return array<int,mixed>
+     */
     public static function mutateFormDataBeforeFill(array $data): array
     {
         $features = [];

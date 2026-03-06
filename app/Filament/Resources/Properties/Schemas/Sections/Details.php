@@ -13,7 +13,7 @@ class Details
     {
         return Tab::make('التفاصيل')
             ->schema([
-                Grid::make()->columns(3)->columnSpanFull()->schema([
+                Grid::make()->columns(4)->columnSpanFull()->schema([
                     TextInput::make('area')
                         ->label(__('filament.property.fields.area'))
                         ->required()
@@ -34,9 +34,6 @@ class Details
                         ->label(__('filament.property.fields.parking_capacity'))
                         ->required()
                         ->numeric(),
-                    DatePicker::make('delivery_date')
-                        ->label(__('filament.property.fields.delivery_date'))
-                        ->nullable(),
                 ]),
             ]);
     }

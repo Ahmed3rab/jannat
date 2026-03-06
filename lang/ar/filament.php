@@ -124,6 +124,11 @@ return [
             'singular' => 'عقار',
             'plural' => 'العقارات',
         ],
+        'sections'  => [
+            'basic_info'    => 'البيانات الأسايسة حول العقار',
+            'meta_column'   => 'بيانات التواريخ والعرض',
+
+        ],
     ],
     'floors'    => [
         'label' => [

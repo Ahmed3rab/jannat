@@ -38,4 +38,8 @@ return [
     'location_details'  => 'Al-Siyahiya, Al-Qubab St, Tripoli, Libya.',
     'send'  => 'send',
     'advanced_filters'  => 'Filters',
+    'offers'    => [
+        'sell'  => 'بيع',
+        'rent' => 'إيجار',
+    ],
 ];

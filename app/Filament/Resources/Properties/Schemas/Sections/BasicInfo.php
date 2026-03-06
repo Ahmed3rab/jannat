@@ -56,18 +56,6 @@ class BasicInfo
                         ->maxLength(250)
                         ->required(),
 
-                    TextInput::make('price')
-                        ->label(__('filament.property.fields.price'))
-                        ->numeric()
-                        ->required(),
-
-                    Select::make('offer')
-                        ->label(__('filament.property.fields.offer'))
-                        ->options([
-                            'sell' => 'بيع',
-                            'rent' => 'إيجار',
-                        ])
-                        ->required(),
                 ]),
             ]);
     }

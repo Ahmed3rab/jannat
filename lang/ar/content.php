@@ -39,4 +39,8 @@ return [
     'location_details'  => 'شارع القبب السياحية بالقرب من مطعم تقسيم',
     'send'  => 'إرسال',
     'advanced_filters'  => 'بحث متقدم',
+    'offers'    => [
+        'sell'  => 'بيع',
+        'rent' => 'إيجار',
+    ],
 ];
