@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Filament\Resources\Properties\Schemas\Sections;
+
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Schemas\Components\Grid;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
+use Filament\Schemas\Components\Tabs\Tab;
+
+class BasicInfo
+{
+    public static function make(): Tab
+    {
+        return Tab::make('المعلومات الأساسية')
+            ->schema([
+                Grid::make()->columns(2)->columnSpanFull()->schema([
+                    TextInput::make('title.ar')
+                        ->label(__('filament.property.fields.title.ar'))
+                        ->string()
+                        ->minLength(3)
+                        ->maxLength(250)
+                        ->required(),
+
+                    TextInput::make('title.en')
+                        ->label(__('filament.property.fields.title.en'))
+                        ->string()
+                        ->minLength(3)
+                        ->maxLength(250)
+                        ->required(),
+
+                    Textarea::make('brief.ar')
+                        ->label(__('filament.property.fields.brief.ar'))
+                        ->string()
+                        ->minLength(3)
+                        ->maxLength(250)
+                        ->required(),
+
+                    Textarea::make('brief.en')
+                        ->label(__('filament.property.fields.brief.en'))
+                        ->string()
+                        ->minLength(3)
+                        ->maxLength(250)
+                        ->required(),
+
+                    RichEditor::make('description.ar')
+                        ->label(__('filament.property.fields.description.ar'))
+                        ->minLength(3)
+                        ->maxLength(250)
+                        ->required(),
+
+                    RichEditor::make('description.en')
+                        ->label(__('filament.property.fields.description.en'))
+                        ->minLength(3)
+                        ->maxLength(250)
+                        ->required(),
+
+                    TextInput::make('price')
+                        ->label(__('filament.property.fields.price'))
+                        ->numeric()
+                        ->required(),
+
+                    Select::make('offer')
+                        ->label(__('filament.property.fields.offer'))
+                        ->options([
+                            'sell' => 'بيع',
+                            'rent' => 'إيجار',
+                        ])
+                        ->required(),
+                ]),
+            ]);
+    }
+}
