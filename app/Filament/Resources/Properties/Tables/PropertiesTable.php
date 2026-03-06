@@ -2,14 +2,13 @@
 
 namespace App\Filament\Resources\Properties\Tables;
 
+use App\Filament\Tables\Columns\MoneyLYDColumn;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Actions\ViewAction;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
@@ -20,89 +19,43 @@ class PropertiesTable
     {
         return $table
             ->columns([
-                TextColumn::make('uuid')
-                    ->label('UUID')
-                    ->searchable(),
                 TextColumn::make('reference')
+                    ->label(__('filament.property.fields.reference'))
                     ->searchable(),
-                TextColumn::make('price')
-                    ->money()
-                    ->sortable(),
                 TextColumn::make('offer')
+                    ->label(__('filament.property.fields.offer'))
+                    ->formatStateUsing(fn($state) => $state->label())
                     ->badge()
                     ->searchable(),
                 TextColumn::make('type.name')
+                    ->label(__('filament.property.fields.type'))
                     ->searchable(),
                 TextColumn::make('category.name')
+                    ->label(__('filament.property.fields.category'))
                     ->searchable(),
-                TextColumn::make('area')
-                    ->numeric()
+                MoneyLYDColumn::make('price')
+                    ->label(__('filament.property.fields.price'))
+                    ->weight('bold')
+                    ->color('success')
                     ->sortable(),
-                TextColumn::make('floors')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('floored_area')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('rooms')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('parking_capacity')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('published_at')
-                    ->dateTime()
+                TextColumn::make('status')
+                    ->label(__('filament.property.fields.status'))
+                    ->formatStateUsing(fn($state) => $state->label())
+                    ->color(fn($state) => $state->color())
+                    ->badge()
                     ->sortable(),
                 TextColumn::make('delivery_date')
-                    ->dateTime()
+                    ->label(__('filament.property.fields.delivery_date'))
+                    ->date('Y-m-d')
+                    ->placeholder(__('filament.general.n/a'))
                     ->sortable(),
-                ImageColumn::make('meta_image'),
-                TextColumn::make('location_id')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('map_url')
-                    ->searchable(),
-                TextColumn::make('latitude')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('longitude')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('rooms_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('main_rooms_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('saloons_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('living_rooms_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('kitchens_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('bathrooms_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('offices_total')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('ac_units_total')
-                    ->numeric()
-                    ->sortable(),
-                IconColumn::make('is_fully_furnished')
-                    ->boolean(),
                 TextColumn::make('created_at')
+                    ->label(__('filament.general.fields.created_at'))
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+                    ->label(__('filament.general.fields.updated_at'))
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

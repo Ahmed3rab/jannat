@@ -59,7 +59,7 @@ class Property extends Model
         return [
             'status'    => PropertyStatus::class,
             'published_at' => 'datetime',
-            'delivery_date' => 'date',
+            'delivery_date' => 'datetime:Y-m-d',
             'offer' => Offer::class,
             'latitude' => 'decimal:7',
             'longitude' => 'decimal:7',

@@ -3,6 +3,13 @@
 use function Termwind\parse;
 
 return [
+    'general'   => [
+        'fields'    => [
+            'created_at' => 'تاريخ الإنشاء',
+            'updated_at'    => 'تاريخ آخر تعديل',
+        ],
+        'n/a'   => 'لا يوجد',
+    ],
     'location'  => [
         'fields'    => [
             'name'  => [

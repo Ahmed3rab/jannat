@@ -23,4 +23,13 @@ enum PropertyStatus: string
             ->mapWithKeys(fn($case) => [$case->value => $case->label()])
             ->toArray();
     }
+
+    public function color(): string
+    {
+        return match ($this) {
+            self::Draft => 'amber',
+            self::Published => 'primary',
+            self::Archived => 'gray',
+        };
+    }
 }
