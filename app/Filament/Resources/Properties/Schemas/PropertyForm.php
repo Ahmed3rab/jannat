@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Properties\Schemas;
 
 use App\Enums\Offer;
+use App\Enums\PropertyStatus;
 use App\Filament\Resources\Properties\Schemas\Sections\BasicInfo;
 use App\Filament\Resources\Properties\Schemas\Sections\Classification;
 use App\Filament\Resources\Properties\Schemas\Sections\Details;
@@ -15,6 +16,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Schema;
 
 class PropertyForm
@@ -52,6 +54,17 @@ class PropertyForm
                                 ->options(Offer::options())
                                 ->required(),
                         ]),
+
+                        Select::make('status')
+                            ->label(__('filament.property.fields.status'))
+                            ->options(PropertyStatus::options())
+                            ->default(PropertyStatus::Draft->value)
+                            ->live()
+                            ->required(),
+                        DatePicker::make('publised_at')
+                            ->label(__('filament.property.fields.published_at'))
+                            ->visible(fn(Get $get) => $get('status') == PropertyStatus::Published->value)
+                            ->nullable(),
                         DatePicker::make('delivery_date')
                             ->label(__('filament.property.fields.delivery_date'))
                             ->nullable(),

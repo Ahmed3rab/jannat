@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\Offer;
+use App\Enums\PropertyStatus;
 use App\Traits\HasSeo;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
@@ -37,7 +38,6 @@ class Property extends Model
     protected static function booted(): void
     {
         static::creating(function (Property $property) {
-            $property->published_at = now();
             if (empty($property->reference)) {
                 $property->reference = self::generateReference();
             }
@@ -57,6 +57,7 @@ class Property extends Model
     protected function casts(): array
     {
         return [
+            'status'    => PropertyStatus::class,
             'published_at' => 'datetime',
             'delivery_date' => 'date',
             'offer' => Offer::class,
@@ -97,8 +98,27 @@ class Property extends Model
         return $this->hasMany(PropertyFloor::class)->withTrashed();
     }
 
-    public function location()
+    /**
+     * @return BelongsTo<Location,Property>
+     */
+    public function location(): BelongsTo
     {
         return $this->belongsTo(Location::class);
+    }
+
+    /**
+     * @param mixed $query
+     */
+    public function scopePublished($query)
+    {
+        return $query->where('status', PropertyStatus::Published);
+    }
+
+    /**
+     * @param mixed $query
+     */
+    public function scopeLive($query)
+    {
+        return $query->where('status', PropertyStatus::Published)->where('published_at', '<=', now());
     }
 }

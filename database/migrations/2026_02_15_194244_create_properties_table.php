@@ -26,7 +26,8 @@ return new class extends Migration {
             $table->decimal('floored_area', 10, 2)->nullable();
             $table->integer('rooms')->nullable();
             $table->decimal('parking_capacity', 10, 2)->nullable();
-            $table->dateTime('published_at');
+            $table->string('status');
+            $table->dateTime('published_at')->nullable();
             $table->dateTime('delivery_date')->nullable();
             $table->foreignId('location_id')->constrained('locations');
             $table->json('nearest_landmark')->nullable();
