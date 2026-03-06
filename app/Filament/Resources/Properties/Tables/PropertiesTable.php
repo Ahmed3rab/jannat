@@ -35,6 +35,7 @@ class PropertiesTable
                     ->searchable(),
                 MoneyLYDColumn::make('price')
                     ->label(__('filament.property.fields.price'))
+                    ->extraCellAttributes(['class' => 'text-right'])
                     ->weight('bold')
                     ->color('success')
                     ->sortable(),

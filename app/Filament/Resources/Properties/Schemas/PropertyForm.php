@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Properties\Schemas;
 
 use App\Enums\Offer;
 use App\Enums\PropertyStatus;
+use App\Filament\Forms\Components\MoneyLYDInput;
 use App\Filament\Resources\Properties\Schemas\Sections\BasicInfo;
 use App\Filament\Resources\Properties\Schemas\Sections\Classification;
 use App\Filament\Resources\Properties\Schemas\Sections\Details;
@@ -45,9 +46,8 @@ class PropertyForm
                     ->heading(__('filament.property.sections.meta_column'))
                     ->schema([
                         Grid::make()->columns(2)->schema([
-                            TextInput::make('price')
+                            MoneyLYDInput::make('price')
                                 ->label(__('filament.property.fields.price'))
-                                ->numeric()
                                 ->required(),
                             Select::make('offer')
                                 ->label(__('filament.property.fields.offer'))
