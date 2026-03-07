@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\Offer;
 use App\Enums\PropertyStatus;
+use App\Support\Media\PropertyPathGenerator;
 use App\Traits\HasSeo;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
@@ -15,6 +16,7 @@ use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\Support\PathGenerator\PathGeneratorFactory;
 use Spatie\Translatable\HasTranslations;
 
 class Property extends Model implements HasMedia
@@ -37,6 +39,11 @@ class Property extends Model implements HasMedia
     public function uniqueIds(): array
     {
         return ['uuid'];
+    }
+
+    protected static function booting(): void
+    {
+        PathGeneratorFactory::setCustomPathGenerators(static::class, PropertyPathGenerator::class);
     }
 
     protected static function booted(): void
