@@ -42,6 +42,20 @@ class Property extends Model
                 $property->reference = self::generateReference();
             }
         });
+
+        static::saving(function ($property) {
+            if ($property->map_url && str_contains($property->map_url, 'maps.app.goo.gl')) {
+                try {
+                    $headers = get_headers($property->map_url, 1);
+                    if (isset($headers['Location'])) {
+                        $property->map_url = is_array($headers['Location']) ? end($headers['Location']) : $headers['Location'];
+                    }
+
+                } catch (\Exception $e) {
+                    // ignore if resolution fails
+                }
+            }
+        });
     }
 
     protected static function generateReference(): string

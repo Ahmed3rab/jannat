@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Properties\Schemas\Infolists;
 
 use Filament\Infolists\Components\TextEntry;
+use Filament\Infolists\Components\ViewEntry;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Support\Enums\IconPosition;
 use Filament\Support\Enums\TextSize;
@@ -53,6 +54,10 @@ class Location
                     ->color('primary')
                     ->size(TextSize::Medium)
                     ->placeholder(__('filament.general.n/a')),
+                ViewEntry::make('map')
+                    ->label(__('filament.property.fields.map'))
+                    ->columnSpanFull()
+                    ->view('filament.infolists.map-preview'),
             ])
             ->columns(2);
     }

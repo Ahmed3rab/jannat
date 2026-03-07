@@ -38,6 +38,7 @@ class Location
                         ->required(),
                     TextInput::make('map_url')
                         ->label(__('filament.property.fields.map_url'))
+                        ->rule('regex:/google\.com\/maps|maps\.app\.goo\.gl/')
                         ->suffixIcon(Heroicon::GlobeAlt)
                         ->url()
                         ->nullable(),

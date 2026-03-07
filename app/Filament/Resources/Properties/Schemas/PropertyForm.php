@@ -60,6 +60,9 @@ class PropertyForm
                             ->label(__('filament.property.fields.published_at'))
                             ->visible(fn(Get $get) => $get('status') == PropertyStatus::Published->value)
                             ->requiredIf('status', PropertyStatus::Published->value)
+                            ->validationMessages([
+                                'required_if' => 'حقل تاريخ النشر مطلوب إذا كانت حالة الإعلان منشور.',
+                            ])
                             ->nullable(),
                         DatePicker::make('delivery_date')
                             ->label(__('filament.property.fields.delivery_date'))
