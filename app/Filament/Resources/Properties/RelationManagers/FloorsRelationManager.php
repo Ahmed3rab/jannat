@@ -106,10 +106,15 @@ class FloorsRelationManager extends RelationManager
         return $table
             ->modifyQueryUsing(fn(Builder $query) => $query->with(['services', 'rooms']))
             ->columns([
-                TextColumn::make('name')->formatStateUsing(fn($state, $record) => $record->getTranslation('name', 'ar')),
-                TextColumn::make('floor_number')->label('Floor'),
-                TextColumn::make('area'),
-                TextColumn::make('floored_area'),
+                TextColumn::make('name')
+                    ->label(__('filament.floors.fields.name.ar'))
+                    ->formatStateUsing(fn($state, $record) => $record->getTranslation('name', 'ar')),
+                TextColumn::make('floor_number')
+                    ->label(__('filament.floors.fields.floor_number')),
+                TextColumn::make('area')
+                    ->label(__('filament.floors.fields.area')),
+                TextColumn::make('floored_area')
+                    ->label(__('filament.floors.fields.floored_area')),
             ])
             ->defaultSort('sort_order')
             ->headerActions([
