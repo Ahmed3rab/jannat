@@ -35,6 +35,13 @@ class Property extends Model implements HasMedia
     public array $translatable = ['title', 'description', 'brief', 'nearest_landmark'];
 
     /**
+     * The relationships that should always be loaded.
+     *
+     * @var array
+     */
+    protected $with = ['media', 'location.parent'];
+
+    /**
      * Get the columns that should receive a unique identifier.
      *
      * @return array<int, string>
@@ -148,6 +155,26 @@ class Property extends Model implements HasMedia
     public function scopeLive($query)
     {
         return $query->where('status', PropertyStatus::Published)->where('published_at', '<=', now());
+    }
+
+    public function scopeWithFeaturedImage($query)
+    {
+        return $query->with([
+            'media' => fn($q) => $q->where('collection_name', 'featured_image'),
+        ]);
+    }
+
+    public function getFeaturedImageUrl(string $conversion = 'preview'): ?string
+    {
+        return $this->getFirstMediaUrl('featured_image', $conversion);
+    }
+
+    public function getGalleryImages(string $conversion = 'thumb')
+    {
+        return $this->getMedia('gallery')->map(fn($media) => [
+            'url' => $media->getUrl($conversion),
+            'full' => $media->getUrl(),
+        ]);
     }
 
     public function registerMediaCollections(): void
