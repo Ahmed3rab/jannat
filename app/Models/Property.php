@@ -87,7 +87,7 @@ class Property extends Model
      */
     public function features(): BelongsToMany
     {
-        return $this->belongsToMany(Feature::class)->withPivot('value')->withTimestamps();
+        return $this->belongsToMany(Feature::class, 'property_feature')->withPivot('value')->withTimestamps();
     }
 
     /**

@@ -2,10 +2,19 @@
 
 namespace App\Filament\Resources\Properties\Schemas;
 
-use App\Models\Property;
-use Filament\Infolists\Components\IconEntry;
-use Filament\Infolists\Components\ImageEntry;
+use App\Enums\PropertyStatus;
+use App\Filament\Resources\Properties\Schemas\Infolists\BasicInfo;
+use App\Filament\Resources\Properties\Schemas\Infolists\Classification;
+use App\Filament\Resources\Properties\Schemas\Infolists\Details;
+use App\Filament\Resources\Properties\Schemas\Infolists\Features;
+use App\Filament\Resources\Properties\Schemas\Infolists\Location;
+use App\Filament\Resources\Properties\Schemas\Infolists\Rooms;
+use App\Filament\Resources\Properties\Schemas\Infolists\Services;
 use Filament\Infolists\Components\TextEntry;
+use Filament\Schemas\Components\Grid;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Schema;
 
 class PropertyInfolist
@@ -14,93 +23,54 @@ class PropertyInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('uuid')
-                    ->label('UUID'),
-                TextEntry::make('reference'),
-                TextEntry::make('title')
-                    ->columnSpanFull(),
-                TextEntry::make('description')
-                    ->columnSpanFull(),
-                TextEntry::make('brief')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
-                TextEntry::make('price')
-                    ->money()
-                    ->placeholder('-'),
-                TextEntry::make('offer')
-                    ->badge(),
-                TextEntry::make('type.name')
-                    ->label('Type'),
-                TextEntry::make('category.name')
-                    ->label('Category'),
-                TextEntry::make('area')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('floors')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('floored_area')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('rooms')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('parking_capacity')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('published_at')
-                    ->dateTime(),
-                TextEntry::make('delivery_date')
-                    ->dateTime()
-                    ->placeholder('-'),
-                TextEntry::make('meta_title')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
-                TextEntry::make('meta_description')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
-                ImageEntry::make('meta_image')
-                    ->placeholder('-'),
-                TextEntry::make('location_id')
-                    ->numeric(),
-                TextEntry::make('nearest_landmark')
-                    ->placeholder('-')
-                    ->columnSpanFull(),
-                TextEntry::make('map_url')
-                    ->placeholder('-'),
-                TextEntry::make('latitude')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('longitude')
-                    ->numeric()
-                    ->placeholder('-'),
-                TextEntry::make('deleted_at')
-                    ->dateTime()
-                    ->visible(fn (Property $record): bool => $record->trashed()),
-                TextEntry::make('rooms_total')
-                    ->numeric(),
-                TextEntry::make('main_rooms_total')
-                    ->numeric(),
-                TextEntry::make('saloons_total')
-                    ->numeric(),
-                TextEntry::make('living_rooms_total')
-                    ->numeric(),
-                TextEntry::make('kitchens_total')
-                    ->numeric(),
-                TextEntry::make('bathrooms_total')
-                    ->numeric(),
-                TextEntry::make('offices_total')
-                    ->numeric(),
-                TextEntry::make('ac_units_total')
-                    ->numeric(),
-                IconEntry::make('is_fully_furnished')
-                    ->boolean(),
-                TextEntry::make('created_at')
-                    ->dateTime()
-                    ->placeholder('-'),
-                TextEntry::make('updated_at')
-                    ->dateTime()
-                    ->placeholder('-'),
+                Grid::make()->columns(12)->columnSpanFull()->schema([
+                    Tabs::make('Property')
+                        ->contained(true)
+                        ->tabs([
+                            BasicInfo::make(),
+                            Classification::make(),
+                            Details::make(),
+                            Features::make(),
+                            Rooms::make(),
+                            Services::make(),
+                            Location::make(),
+                        ])
+                        ->columnSpan(8),
+
+                    Section::make()
+                        ->columnSpan(4)
+                        ->heading(__('filament.property.sections.meta_column'))
+                        ->schema([
+                            Grid::make()->columns(3)->schema([
+                                TextEntry::make('price')
+                                    ->formatStateUsing(fn($state) => number_format($state) . ' د.ل')
+                                    ->label(__('filament.property.fields.price')),
+                                TextEntry::make('offer')
+                                    ->label(__('filament.property.fields.offer'))
+                                    ->badge()
+                                    ->formatStateUsing(fn($state) => $state->label()),
+                                TextEntry::make('is_fully_furnished')
+                                    ->label(__('filament.property.fields.is_fully_furnished'))
+                                    ->badge()
+                                    ->formatStateUsing(fn($state) => $state ? __('content.furnishing.full') : __('content.furnishing.none')),
+                            ]),
+                            Grid::make()->columns(2)->columnSpanFull()->schema([
+                                TextEntry::make('status')
+                                    ->label(__('filament.property.fields.status'))
+                                    ->badge()
+                                    ->color(fn($state) => $state->color())
+                                    ->formatStateUsing(fn($state) => $state->label()),
+                                TextEntry::make('published_at')
+                                    ->label(__('filament.property.fields.published_at'))
+                                    ->visible(fn(Get $get) => $get('status')->value == PropertyStatus::Published->value)
+                                    ->date('Y-m-d'),
+                            ]),
+                            TextEntry::make('delivery_date')
+                                ->label(__('filament.property.fields.delivery_date'))
+                                ->date('Y-m-d')
+                                ->placeholder(__('filament.general.n/a')),
+                        ]),
+                ]),
             ]);
     }
 }

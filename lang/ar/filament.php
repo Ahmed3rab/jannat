@@ -94,6 +94,9 @@ return [
     ],
 
     'property'  => [
+        'actions'   => [
+            'open_map' => 'زيارة الخريطة',
+        ],
         'fields'    => [
             'title'  => [
                 'ar'    =>  'العنوان بالعربي',
@@ -127,6 +130,15 @@ return [
                 'en'    => 'أقرب نقطة دالة بالإنجليزية',
             ],
             'status'    => 'حالة الإعلان',
+            'rooms_total'   => 'إجمالي الحجرات',
+            'main_rooms_total' => 'إجمالي الحجرات الرئيسية',
+            'living_rooms_total' => 'إجمالي الصالات',
+            'saloons_total' => 'إجمالي الصالونات',
+            'kitchens_total'    => 'إجمالي المطابخ',
+            'bathrooms_total'   => 'إجمالي دورات المياه',
+            'offices_total' => 'إجمالي المكاتب',
+            'ac_units_total' => 'إجمالي وحدات التكييف',
+            'is_fully_furnished' => 'الفرش',
         ],
         'label' => [
             'singular' => 'عقار',
@@ -156,7 +168,7 @@ return [
             'saloons'   => 'عدد الصالونات',
             'living_rooms'  => 'عدد الصالات',
             'kitchens'  => 'عدد المطابخ',
-            'bathrooms' => 'عدد الحمامات',
+            'bathrooms' => 'عدد دورات المياه',
             'ac_units'  => 'عدد وحدات التكييف',
             'furnishing'    => 'الفرش',
             'offices'   => 'عدد المكاتب',

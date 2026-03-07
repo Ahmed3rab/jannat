@@ -16,4 +16,13 @@ class ViewProperty extends ViewRecord
             EditAction::make(),
         ];
     }
+    public function getHeading(): string
+    {
+        return $this->record->getTranslation('title', app()->getLocale());
+    }
+
+    public function getSubheading(): ?string
+    {
+        return $this->record->reference;
+    }
 }

@@ -23,7 +23,7 @@ class Feature extends Model
 
     public function properties()
     {
-        return $this->belongsToMany(Property::class)->withPivot('value')->withTimestamps();
+        return $this->belongsToMany(Property::class, 'property_feature')->withPivot('value')->withTimestamps();
     }
 
     public function options()

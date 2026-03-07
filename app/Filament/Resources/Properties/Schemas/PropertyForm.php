@@ -61,7 +61,7 @@ class PropertyForm
                             ->default(PropertyStatus::Draft->value)
                             ->live()
                             ->required(),
-                        DatePicker::make('publised_at')
+                        DatePicker::make('published_at')
                             ->label(__('filament.property.fields.published_at'))
                             ->visible(fn(Get $get) => $get('status') == PropertyStatus::Published->value)
                             ->nullable(),
@@ -73,45 +73,4 @@ class PropertyForm
         ]);
     }
 
-    /**
-     * @param array<int,mixed> $data
-     */
-    public static function afterSave(Property $record, array $data): void
-    {
-        if (!isset($data['features'])) {
-            return;
-        }
-
-        $sync = [];
-
-        foreach ($data['features'] as $featureId => $value) {
-
-            if ($value === null || $value === '') {
-                continue;
-            }
-
-            $sync[$featureId] = [
-                'value' => is_bool($value) ? ($value ? '1' : '0') : $value,
-            ];
-        }
-
-        $record->features()->sync($sync);
-    }
-
-    /**
-     * @param array<int,mixed> $data
-     * @return array<int,mixed>
-     */
-    public static function mutateFormDataBeforeFill(array $data): array
-    {
-        $features = [];
-
-        foreach ($data['features'] ?? [] as $feature) {
-            $features[$feature['id']] = $feature['pivot']['value'];
-        }
-
-        $data['features'] = $features;
-
-        return $data;
-    }
 }
