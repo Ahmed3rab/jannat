@@ -1,5 +1,7 @@
 <?php
 
+use App\Support\Media\PropertyWidthCalculator;
+
 return [
 
     /*
@@ -255,7 +257,7 @@ return [
          *
          * https://docs.spatie.be/laravel-medialibrary/v9/advanced-usage/generating-responsive-images
          */
-        'width_calculator' => Spatie\MediaLibrary\ResponsiveImages\WidthCalculator\FileSizeOptimizedWidthCalculator::class,
+        'width_calculator' => PropertyWidthCalculator::class,
 
         /*
          * By default rendering media to a responsive image will add some javascript and a tiny placeholder.

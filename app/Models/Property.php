@@ -167,6 +167,7 @@ class Property extends Model implements HasMedia
         $this
             ->addMediaConversion('webp')
             ->fit(Fit::Max, 2500, 2500)
+            ->optimize()
             ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
             ->format('webp')
             ->quality(85)
