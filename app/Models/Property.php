@@ -20,6 +20,7 @@ use Spatie\MediaLibrary\Support\PathGenerator\PathGeneratorFactory;
 use Spatie\Translatable\HasTranslations;
 use Spatie\Image\Enums\AlignPosition;
 use Spatie\Image\Enums\Unit;
+use Spatie\Image\Enums\Fit;
 
 class Property extends Model implements HasMedia
 {
@@ -151,20 +152,31 @@ class Property extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('featured_image')
+        $this
+            ->addMediaCollection('featured_image')
             ->useDisk('images')
             ->singleFile();
 
-        $this->addMediaCollection('gallery')
+        $this
+            ->addMediaCollection('gallery')
             ->useDisk('images');
     }
 
     public function registerMediaConversions(Media $media = null): void
     {
         $this
-            ->addMediaConversion('thumb')
-            ->format('webp')
+            ->addMediaConversion('webp')
+            ->fit(Fit::Max, 2500, 2500)
             ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
+            ->format('webp')
+            ->quality(85)
+            ->performOnCollections('featured_image', 'gallery')
+            ->withResponsiveImages();
+
+        $this
+            ->addMediaConversion('thumb')
+            ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
+            ->format('webp')
             ->width(400)
             ->height(300)
             ->sharpen(10)
@@ -172,8 +184,8 @@ class Property extends Model implements HasMedia
 
         $this
             ->addMediaConversion('preview')
-            ->format('webp')
             ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
+            ->format('webp')
             ->width(1200)
             ->height(800)
             ->performOnCollections('featured_image', 'gallery');
