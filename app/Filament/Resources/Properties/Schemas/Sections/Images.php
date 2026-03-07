@@ -19,9 +19,10 @@ class Images
                         SpatieMediaLibraryFileUpload::make('featured_image')
                             ->hiddenLabel()
                             ->collection('featured_image')
+                            ->responsiveImages()
+                            ->conversion('preview')
                             ->image()
                             ->imageEditor()
-                            ->responsiveImages()
                             ->required(),
                     ]),
 
@@ -30,6 +31,8 @@ class Images
                         SpatieMediaLibraryFileUpload::make('gallery')
                             ->hiddenLabel()
                             ->collection('gallery')
+                            ->responsiveImages()
+                            ->conversion('thumb')
                             ->multiple()
                             ->panelLayout('grid')
                             ->image()

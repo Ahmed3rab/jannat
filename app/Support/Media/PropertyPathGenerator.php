@@ -9,16 +9,16 @@ class PropertyPathGenerator implements PathGenerator
 {
     public function getPath(Media $media): string
     {
-        return "properties/{$media->model->uuid}/";
+        return "properties/{$media->model->uuid}/{$media->collection_name}/";
     }
 
     public function getPathForConversions(Media $media): string
     {
-        return "properties/{$media->model->uuid}/conversions/";
+        return "properties/{$media->model->uuid}/{$media->collection_name}/conversions/";
     }
 
     public function getPathForResponsiveImages(Media $media): string
     {
-        return "properties/{$media->model->uuid}/responsive/";
+        return "properties/{$media->model->uuid}/{$media->collection_name}/responsive/";
     }
 }

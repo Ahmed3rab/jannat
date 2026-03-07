@@ -18,6 +18,8 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\MediaLibrary\Support\PathGenerator\PathGeneratorFactory;
 use Spatie\Translatable\HasTranslations;
+use Spatie\Image\Enums\AlignPosition;
+use Spatie\Image\Enums\Unit;
 
 class Property extends Model implements HasMedia
 {
@@ -161,13 +163,19 @@ class Property extends Model implements HasMedia
     {
         $this
             ->addMediaConversion('thumb')
+            ->format('webp')
+            ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
             ->width(400)
             ->height(300)
-            ->sharpen(10);
+            ->sharpen(10)
+            ->performOnCollections('gallery');
 
         $this
             ->addMediaConversion('preview')
+            ->format('webp')
+            ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
             ->width(1200)
-            ->height(800);
+            ->height(800)
+            ->performOnCollections('featured_image', 'gallery');
     }
 }
