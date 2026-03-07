@@ -9,6 +9,7 @@ use App\Filament\Resources\Properties\Schemas\Sections\BasicInfo;
 use App\Filament\Resources\Properties\Schemas\Sections\Classification;
 use App\Filament\Resources\Properties\Schemas\Sections\Details;
 use App\Filament\Resources\Properties\Schemas\Sections\Features;
+use App\Filament\Resources\Properties\Schemas\Sections\Images;
 use App\Filament\Resources\Properties\Schemas\Sections\Location;
 use App\Models\Property;
 use Filament\Forms\Components\DatePicker;
@@ -34,6 +35,7 @@ class PropertyForm
                         Details::make(),
                         Features::make(),
                         Location::make(),
+                        Images::make(),
                     ])
                     ->columnSpan(8),
                 Section::make()
