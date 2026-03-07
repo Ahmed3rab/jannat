@@ -26,21 +26,16 @@ class PropertyForm
     {
         return $schema->schema([
             Grid::make()->columns(12)->columnSpanFull()->schema([
-                Section::make()
-                    ->columnSpan(8)
-                    ->heading(__('filament.property.sections.basic_info'))
-                    ->schema([
-                        Tabs::make('Property')
-                            ->contained(true)
-                            ->tabs([
-                                BasicInfo::make(),
-                                Classification::make(),
-                                Details::make(),
-                                Features::make(),
-                                Location::make(),
-                            ])
-                            ->columnSpan(8),
-                    ]),
+                Tabs::make('Property')
+                    ->contained(true)
+                    ->tabs([
+                        BasicInfo::make(),
+                        Classification::make(),
+                        Details::make(),
+                        Features::make(),
+                        Location::make(),
+                    ])
+                    ->columnSpan(8),
                 Section::make()
                     ->columnSpan(4)
                     ->heading(__('filament.property.sections.meta_column'))
@@ -64,6 +59,7 @@ class PropertyForm
                         DatePicker::make('published_at')
                             ->label(__('filament.property.fields.published_at'))
                             ->visible(fn(Get $get) => $get('status') == PropertyStatus::Published->value)
+                            ->requiredIf('status', PropertyStatus::Published->value)
                             ->nullable(),
                         DatePicker::make('delivery_date')
                             ->label(__('filament.property.fields.delivery_date'))

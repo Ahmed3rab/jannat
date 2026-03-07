@@ -2,18 +2,19 @@
 
 namespace App\Filament\Resources\Properties\Schemas\Sections;
 
-use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Components\Grid;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Components\Tabs\Tab;
+use Filament\Support\Icons\Heroicon;
 
 class BasicInfo
 {
     public static function make(): Tab
     {
         return Tab::make('المعلومات الأساسية')
+            ->icon(Heroicon::OutlinedHome)
             ->schema([
                 Grid::make()->columns(2)->columnSpanFull()->schema([
                     TextInput::make('title.ar')

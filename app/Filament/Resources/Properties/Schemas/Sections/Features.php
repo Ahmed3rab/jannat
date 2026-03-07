@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Section;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Tabs\Tab;
+use Filament\Support\Icons\Heroicon;
 
 class Features
 {
@@ -45,6 +46,8 @@ class Features
             }
         }
 
-        return Tab::make('المرافق')->schema($sections);
+        return Tab::make('المرافق')
+            ->icon(Heroicon::CheckCircle)
+            ->schema($sections);
     }
 }

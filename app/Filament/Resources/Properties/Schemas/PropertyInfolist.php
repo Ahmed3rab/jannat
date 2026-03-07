@@ -44,6 +44,8 @@ class PropertyInfolist
                             Grid::make()->columns(3)->schema([
                                 TextEntry::make('price')
                                     ->formatStateUsing(fn($state) => number_format($state) . ' د.ل')
+                                    ->color('success')
+                                    ->weight('semibold')
                                     ->label(__('filament.property.fields.price')),
                                 TextEntry::make('offer')
                                     ->label(__('filament.property.fields.offer'))

@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources\Properties\Schemas\Sections;
 
-use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs\Tab;
+use Filament\Support\Icons\Heroicon;
 
 class Details
 {
     public static function make(): Tab
     {
         return Tab::make('التفاصيل')
+            ->icon(Heroicon::OutlinedBuildingOffice2)
             ->schema([
                 Grid::make()->columns(4)->columnSpanFull()->schema([
                     TextInput::make('area')

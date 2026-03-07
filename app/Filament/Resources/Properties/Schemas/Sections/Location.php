@@ -13,8 +13,9 @@ class Location
     public static function make(): Tab
     {
         return Tab::make('الموقع')
+            ->icon(Heroicon::MapPin)
             ->schema([
-                Grid::make()->columns(4)->columnSpanFull()->schema([
+                Grid::make()->columns(2)->columnSpanFull()->schema([
                     Select::make('location_id')
                         ->label(__('filament.property.fields.location'))
                         ->relationship('location', 'name')

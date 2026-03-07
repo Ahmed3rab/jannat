@@ -13,6 +13,7 @@ class Location
     public static function make(): Tab
     {
         return Tab::make('الموقع الجغرافي')
+            ->icon(Heroicon::MapPin)
             ->schema([
                 TextEntry::make('location')
                     ->label(__('filament.property.fields.location'))

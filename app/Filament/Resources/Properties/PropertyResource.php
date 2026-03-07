@@ -39,7 +39,7 @@ class PropertyResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        return parent::getEloquentQuery()->with(['features', 'features.group']);
+        return parent::getEloquentQuery()->with(['features', 'features.group', 'location.parent.parent']);
     }
 
     public static function form(Schema $schema): Schema
