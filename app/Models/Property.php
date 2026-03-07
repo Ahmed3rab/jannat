@@ -168,7 +168,17 @@ class Property extends Model implements HasMedia
             ->addMediaConversion('webp')
             ->fit(Fit::Max, 2500, 2500)
             ->optimize()
-            ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
+            ->watermark(
+                resource_path('images/watermark.png'),
+                AlignPosition::BottomRight,
+                paddingX: 10,
+                paddingY: 10,
+                paddingUnit: Unit::Percent,
+                width: 240,
+                widthUnit: Unit::Pixel,
+                height: 240,
+                heightUnit: Unit::Pixel,
+            )
             ->format('webp')
             ->quality(85)
             ->performOnCollections('featured_image', 'gallery')
@@ -176,7 +186,17 @@ class Property extends Model implements HasMedia
 
         $this
             ->addMediaConversion('thumb')
-            ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
+            ->watermark(
+                resource_path('images/watermark.png'),
+                AlignPosition::BottomRight,
+                paddingX: 10,
+                paddingY: 10,
+                paddingUnit: Unit::Percent,
+                width: 240,
+                widthUnit: Unit::Pixel,
+                height: 240,
+                heightUnit: Unit::Pixel,
+            )
             ->format('webp')
             ->width(400)
             ->height(300)
@@ -185,7 +205,17 @@ class Property extends Model implements HasMedia
 
         $this
             ->addMediaConversion('preview')
-            ->watermark(resource_path('images/watermark.png'), AlignPosition::BottomRight, paddingX: 20, paddingY: 20, paddingUnit: Unit::Percent)
+            ->watermark(
+                resource_path('images/watermark.png'),
+                AlignPosition::BottomRight,
+                paddingX: 10,
+                paddingY: 10,
+                paddingUnit: Unit::Percent,
+                width: 240,
+                widthUnit: Unit::Pixel,
+                height: 240,
+                heightUnit: Unit::Pixel,
+            )
             ->format('webp')
             ->width(1200)
             ->height(800)

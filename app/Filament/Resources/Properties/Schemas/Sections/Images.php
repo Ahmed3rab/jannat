@@ -29,14 +29,12 @@ class Images
                     ->schema([
                         SpatieMediaLibraryFileUpload::make('gallery')
                             ->hiddenLabel()
-                            ->collection('gallery')
-                            ->responsiveImages()
-                            ->conversion('webp')
-                            ->multiple()
                             ->panelLayout('grid')
+                            ->collection('gallery')
+                            ->conversion('webp')
                             ->image()
-                            ->responsiveImages()
                             ->imageEditor()
+                            ->multiple()
                             ->reorderable(),
                     ]),
             ]);

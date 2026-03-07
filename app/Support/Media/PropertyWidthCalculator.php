@@ -4,24 +4,24 @@ namespace App\Support\Media;
 
 use Illuminate\Support\Collection;
 use Spatie\MediaLibrary\ResponsiveImages\WidthCalculator\WidthCalculator;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class PropertyWidthCalculator implements WidthCalculator
 {
-    public function calculateWidths(Media $media): array
+    public function calculateWidths(int $fileSize, int $width, int $height): Collection
     {
-        return [
+        return collect([
             320,
-            480,
             640,
-            768,
             1024,
             1366,
-            1600,
             1920,
-            2500,
-        ];
+        ])->filter(fn($size) => $size <= $width);
     }
 
-    public function calculateWidthsFromFile(string $imagePath): Collection {}
+    public function calculateWidthsFromFile(string $imagePath): Collection
+    {
+        [$width, $height] = getimagesize($imagePath);
+
+        return $this->calculateWidths(filesize($imagePath), $width, $height);
+    }
 }
